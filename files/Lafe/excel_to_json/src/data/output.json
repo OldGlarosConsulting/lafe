@@ -1,0 +1,2629 @@
+[
+  {
+    "item_id": "01.000.000.001",
+    "description": "Projeto Estrutural",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 56000,
+        "total": 56000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.2009642857142857,
+        "amount": 0.2009642857142857,
+        "value": 11254
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 56000,
+        "expected_value": 11254,
+        "readjusted_value": 45265.0536,
+        "value_until_current_month": 56519.0536,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.002",
+    "description": "Projeto Fundação e Contenção",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 9735,
+        "total": 9735,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4211,
+        "amount": 0.4211,
+        "value": 4099.4085
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 9735
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 9735,
+        "expected_value": 9735,
+        "readjusted_value": null,
+        "value_until_current_month": 9735,
+        "expected_value_readjusted": 4099.4085
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.003",
+    "description": "Consultoria Fundação e Contenção",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 5000,
+        "total": 5000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4211,
+        "amount": 0.4211,
+        "value": 2105.5
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.1716659849331041,
+        "amount": 0.1716659849331041,
+        "value": 858.3299246655205
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 5000,
+        "expected_value": 858.3299246655205,
+        "readjusted_value": 4189.713448208359,
+        "value_until_current_month": 5048.04337287388,
+        "expected_value_readjusted": 2125.731064317191
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.004",
+    "description": "Projeto de Proteção Coletiva",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 2800,
+        "total": 2800,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2800,
+        "expected_value": null,
+        "readjusted_value": 2832.48,
+        "value_until_current_month": 2832.48,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.005",
+    "description": "Projeto Arquitetura",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 50000,
+        "total": 50000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.15854,
+        "amount": 0.15854,
+        "value": 7926.999999999999
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 50000,
+        "expected_value": 7926.999999999999,
+        "readjusted_value": 42561.046800000004,
+        "value_until_current_month": 50488.046800000004,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.006",
+    "description": "Projetos de Sistemas Prediais (Elétricos, Telecomunicações, SPDA, Hidrossanitários, glp, Incêndio)",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 22250,
+        "total": 22250,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.14157303370786517,
+        "amount": 0.14157303370786517,
+        "value": 3150
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 22250,
+        "expected_value": 3150,
+        "readjusted_value": 19321.56,
+        "value_until_current_month": 22471.56,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.007",
+    "description": "Projetos instalações complementares (Ar condicionado, Ventilação)",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 3500,
+        "total": 3500,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.5288571428571428,
+        "amount": 0.5288571428571428,
+        "value": 1850.9999999999998
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3500,
+        "expected_value": 1850.9999999999998,
+        "readjusted_value": 1668.1284000000003,
+        "value_until_current_month": 3519.1284,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.008",
+    "description": "Projeto de Demolição e Terraplenagem",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 3000,
+        "total": 3000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3000,
+        "expected_value": 3000,
+        "readjusted_value": null,
+        "value_until_current_month": 3000,
+        "expected_value_readjusted": 3000
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.009",
+    "description": "Projeto de piscina",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 2400,
+        "total": 2400,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2400,
+        "expected_value": null,
+        "readjusted_value": 2427.84,
+        "value_until_current_month": 2427.84,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.010",
+    "description": "Projetos detalhamento",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 15000,
+        "total": 15000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 15000,
+        "expected_value": null,
+        "readjusted_value": 15174,
+        "value_until_current_month": 15174,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "01.000.000.011",
+    "description": "Projeto Luminotécnico",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 1300,
+        "total": 1300,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1300,
+        "expected_value": null,
+        "readjusted_value": 1315.0800000000002,
+        "value_until_current_month": 1315.0800000000002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.001",
+    "description": "Sondagem",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 12000,
+        "total": 12000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 12000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 12000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 12000,
+        "expected_value": 12000,
+        "readjusted_value": null,
+        "value_until_current_month": 12000,
+        "expected_value_readjusted": 12000
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.002",
+    "description": "Levantamento Planialtimétrico",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 1500,
+        "total": 1500,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 1500
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 1500
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1500,
+        "expected_value": 1500,
+        "readjusted_value": null,
+        "value_until_current_month": 1500,
+        "expected_value_readjusted": 1500
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.003",
+    "description": "Serviços de topografia",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 3520,
+        "total": 3520,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3520
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3520
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3520,
+        "expected_value": 3520,
+        "readjusted_value": null,
+        "value_until_current_month": 3520,
+        "expected_value_readjusted": 3520
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.004",
+    "description": "Controle Tecnológico - 3 CP por caminhão",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 12148,
+        "total": 12148,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 12148,
+        "expected_value": null,
+        "readjusted_value": 12288.9168,
+        "value_until_current_month": 12288.9168,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.005",
+    "description": "Vistoria Cautelar",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 4000,
+        "total": 4000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 4000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 4000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4000,
+        "expected_value": 4000,
+        "readjusted_value": null,
+        "value_until_current_month": 4000,
+        "expected_value_readjusted": 4000
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.006",
+    "description": "Analise de Acústica de Entorno",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 3000,
+        "total": 3000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3000,
+        "expected_value": 3000,
+        "readjusted_value": null,
+        "value_until_current_month": 3000,
+        "expected_value_readjusted": 3000
+      }
+    }
+  },
+  {
+    "item_id": "02.000.000.007",
+    "description": "Compensação ambiental",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 10000,
+        "total": 10000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 10000,
+        "expected_value": null,
+        "readjusted_value": 10116,
+        "value_until_current_month": 10116,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.000.000.001",
+    "description": "Instalações provisórias de água/esgoto",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 2500,
+        "total": 2500,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 2500
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 2500
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2500,
+        "expected_value": 2500,
+        "readjusted_value": null,
+        "value_until_current_month": 2500,
+        "expected_value_readjusted": 2500
+      }
+    }
+  },
+  {
+    "item_id": "03.000.000.002",
+    "description": "Instalações provisórias de luz",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 4000,
+        "total": 4000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.5,
+        "amount": 0.5,
+        "value": 2000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 4000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4000,
+        "expected_value": 4000,
+        "readjusted_value": null,
+        "value_until_current_month": 4000,
+        "expected_value_readjusted": 2000
+      }
+    }
+  },
+  {
+    "item_id": "03.000.000.003",
+    "description": "Instalação provisória de incêndio",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 960,
+        "total": 960,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 960
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 960,
+        "expected_value": 960,
+        "readjusted_value": null,
+        "value_until_current_month": 960,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.000.000.004",
+    "description": "Locação de Container",
+    "un": "mes",
+    "budget": {
+      "amount": 7,
+      "values": {
+        "unit": 1200,
+        "total": 8400,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 7,
+        "value": 8400
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 7,
+        "value": 8400
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 8400,
+        "expected_value": 8400,
+        "readjusted_value": null,
+        "value_until_current_month": 8400,
+        "expected_value_readjusted": 8400
+      }
+    }
+  },
+  {
+    "item_id": "03.000.000.005",
+    "description": "Mobilização e desmobilização de container",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 2000,
+        "total": 2000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.5,
+        "amount": 0.5,
+        "value": 1000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.5,
+        "amount": 0.5,
+        "value": 1000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2000,
+        "expected_value": 1000,
+        "readjusted_value": 1011.6,
+        "value_until_current_month": 2011.6,
+        "expected_value_readjusted": 1005.8
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.001",
+    "description": "Almoxarifado (6 x5 m) - Sob laje",
+    "un": "m2",
+    "budget": {
+      "amount": 30,
+      "values": {
+        "unit": 136.4667,
+        "total": 4094,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4094,
+        "expected_value": null,
+        "readjusted_value": 4141.490400000001,
+        "value_until_current_month": 4141.490400000001,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.002",
+    "description": "Banheiro de obra ( 3 X 3 m) Sob laje",
+    "un": "m2",
+    "budget": {
+      "amount": 9,
+      "values": {
+        "unit": 206.7455,
+        "total": 1860.71,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1860.71,
+        "expected_value": null,
+        "readjusted_value": 1882.2942360000002,
+        "value_until_current_month": 1882.2942360000002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.003",
+    "description": "Escritório ( 3x3m) Sob Laje",
+    "un": "m2",
+    "budget": {
+      "amount": 9,
+      "values": {
+        "unit": 155.6473,
+        "total": 1400.83,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1400.83,
+        "expected_value": null,
+        "readjusted_value": 1417.079628,
+        "value_until_current_month": 1417.079628,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.004",
+    "description": "Refeitório ( 3 x 6 m ) sob laje",
+    "un": "m2",
+    "budget": {
+      "amount": 18,
+      "values": {
+        "unit": 70.3844,
+        "total": 1266.92,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1266.92,
+        "expected_value": null,
+        "readjusted_value": 1281.6162720000002,
+        "value_until_current_month": 1281.6162720000002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.005",
+    "description": "Vestiário (5 x 3 m ) sob laje",
+    "un": "m2",
+    "budget": {
+      "amount": 15,
+      "values": {
+        "unit": 157.6273,
+        "total": 2364.41,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2364.41,
+        "expected_value": null,
+        "readjusted_value": 2391.837156,
+        "value_until_current_month": 2391.837156,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.006",
+    "description": "Centrais ( 2 x 3 m ) sob laje",
+    "un": "m2",
+    "budget": {
+      "amount": 6,
+      "values": {
+        "unit": 83.1747,
+        "total": 499.05,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 499.05,
+        "expected_value": null,
+        "readjusted_value": 504.83898000000005,
+        "value_until_current_month": 504.83898000000005,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.001.000.007",
+    "description": "Materiais complementares de Canteiro",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 2158.94,
+        "total": 2158.94,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2158.94,
+        "expected_value": null,
+        "readjusted_value": 2183.983704,
+        "value_until_current_month": 2183.983704,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.002.000.001",
+    "description": "Placa de obra",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 800,
+        "total": 800,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 800
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 800
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 800,
+        "expected_value": 800,
+        "readjusted_value": null,
+        "value_until_current_month": 800,
+        "expected_value_readjusted": 800
+      }
+    }
+  },
+  {
+    "item_id": "03.002.000.002",
+    "description": "Mobiliário de obra (mesa, cadeiras, armários)",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 3039.1,
+        "total": 3039.1,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 3039.1
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3039.1,
+        "expected_value": 3039.1,
+        "readjusted_value": null,
+        "value_until_current_month": 3039.1,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "03.002.000.003",
+    "description": "Tapume h= 2,50m (frente do terreno)",
+    "un": "m2",
+    "budget": {
+      "amount": 60,
+      "values": {
+        "unit": 75.2247,
+        "total": 4513.49,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 60,
+        "value": 4513.49
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 60,
+        "value": 4513.49
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4513.49,
+        "expected_value": 4513.49,
+        "readjusted_value": null,
+        "value_until_current_month": 4513.49,
+        "expected_value_readjusted": 4513.49
+      }
+    }
+  },
+  {
+    "item_id": "03.002.000.004",
+    "description": "Locação da obra",
+    "un": "m2",
+    "budget": {
+      "amount": 816,
+      "values": {
+        "unit": 3.404,
+        "total": 2777.66,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 816,
+        "value": 2777.66
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 816,
+        "value": 2777.66
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2777.66,
+        "expected_value": 2777.66,
+        "readjusted_value": null,
+        "value_until_current_month": 2777.66,
+        "expected_value_readjusted": 2777.66
+      }
+    }
+  },
+  {
+    "item_id": "04.000.000.001",
+    "description": "Serviço de Demolição",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 24000,
+        "total": 24000,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 24000
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 24000
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 24000,
+        "expected_value": 24000,
+        "readjusted_value": null,
+        "value_until_current_month": 24000,
+        "expected_value_readjusted": 24000
+      }
+    }
+  },
+  {
+    "item_id": "04.000.000.002",
+    "description": "Serviço de Terraplenagem",
+    "un": "vb",
+    "budget": {
+      "amount": 1,
+      "values": {
+        "unit": 15800,
+        "total": 15800,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 15800
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 1,
+        "amount": 1,
+        "value": 15800
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 15800,
+        "expected_value": 15800,
+        "readjusted_value": null,
+        "value_until_current_month": 15800,
+        "expected_value_readjusted": 15800
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.001",
+    "description": "Escavação manual de valas até 2,00 m - Blocos e cintas",
+    "un": "m3",
+    "budget": {
+      "amount": 161.14,
+      "values": {
+        "unit": 80,
+        "total": 12891.2,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 12891.2,
+        "expected_value": null,
+        "readjusted_value": 13040.737920000001,
+        "value_until_current_month": 13040.737920000001,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.002",
+    "description": "Apiloamento - Blocos e cintas",
+    "un": "m2",
+    "budget": {
+      "amount": 103.39,
+      "values": {
+        "unit": 19.3423,
+        "total": 1999.8,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1999.8,
+        "expected_value": null,
+        "readjusted_value": 2022.9976800000002,
+        "value_until_current_month": 2022.9976800000002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.003",
+    "description": "Lastro de concreto magro Fck = 9 MPa - Blocos e cintas",
+    "un": "m3",
+    "budget": {
+      "amount": 7.2,
+      "values": {
+        "unit": 296.4115,
+        "total": 2134.17,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2134.17,
+        "expected_value": null,
+        "readjusted_value": 2158.9263720000004,
+        "value_until_current_month": 2158.9263720000004,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.004",
+    "description": "Forma para fundação em tabua - Blocos e cintas",
+    "un": "m2",
+    "budget": {
+      "amount": 433.37,
+      "values": {
+        "unit": 60.5,
+        "total": 26218.89,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 26218.89,
+        "expected_value": null,
+        "readjusted_value": 26523.029124,
+        "value_until_current_month": 26523.029124,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.005",
+    "description": "Armação aço CA-50/60 - Blocos e cintas",
+    "un": "kg",
+    "budget": {
+      "amount": 6933.09,
+      "values": {
+        "unit": 6.0964,
+        "total": 42266.89,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 42266.89,
+        "expected_value": null,
+        "readjusted_value": 42757.185924000005,
+        "value_until_current_month": 42757.185924000005,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.006",
+    "description": "Concreto usinado Fck = 30 Mpa Bombeado - Blocos e cintas",
+    "un": "m3",
+    "budget": {
+      "amount": 90.69,
+      "values": {
+        "unit": 289.8667,
+        "total": 26288.01,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 26288.01,
+        "expected_value": null,
+        "readjusted_value": 26592.950916,
+        "value_until_current_month": 26592.950916,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.007",
+    "description": "Reaterro compactado mecanizado - Blocos e cintas",
+    "un": "m3",
+    "budget": {
+      "amount": 85.99,
+      "values": {
+        "unit": 12.5156,
+        "total": 1076.22,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1076.22,
+        "expected_value": null,
+        "readjusted_value": 1088.704152,
+        "value_until_current_month": 1088.704152,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.001.000.008",
+    "description": "Carga e transporte de material excedente - Blocos e cintas",
+    "un": "m3",
+    "budget": {
+      "amount": 123.55,
+      "values": {
+        "unit": 68.4445,
+        "total": 8456.32,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 8456.32,
+        "expected_value": null,
+        "readjusted_value": 8554.413312,
+        "value_until_current_month": 8554.413312,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.001",
+    "description": "Escavação manual de fustes em material de 1ª categoria",
+    "un": "m3",
+    "budget": {
+      "amount": 251.9,
+      "values": {
+        "unit": 170,
+        "total": 42823,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 114.48855,
+        "value": 19463.0535
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.2892,
+        "amount": 72.84948,
+        "value": 12384.411600000001
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 42823,
+        "expected_value": 12384.411600000001,
+        "readjusted_value": 30791.676025440003,
+        "value_until_current_month": 43176.08762544001,
+        "expected_value_readjusted": 19623.531825762482
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.002",
+    "description": "Alargamento manual de bases em material de 1ª categoria",
+    "un": "m3",
+    "budget": {
+      "amount": 334.38,
+      "values": {
+        "unit": 200,
+        "total": 66876,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 151.97571,
+        "value": 30395.142
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.2892,
+        "amount": 96.702696,
+        "value": 19340.5392
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 66876,
+        "expected_value": 19340.5392,
+        "readjusted_value": 48086.87214528,
+        "value_until_current_month": 67427.41134528001,
+        "expected_value_readjusted": 30645.758456429765
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.003",
+    "description": "Concreto usinado Fck = 20 Mpa Bombeado - Tubulão",
+    "un": "m3",
+    "budget": {
+      "amount": 586.28,
+      "values": {
+        "unit": 296.3924,
+        "total": 173768.94,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 266.46426,
+        "value": 78977.98323
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.17629999999999998,
+        "amount": 103.36116399999999,
+        "value": 30635.464121999998
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 173768.94,
+        "expected_value": 30635.464121999998,
+        "readjusted_value": 144793.8241981848,
+        "value_until_current_month": 175429.2883201848,
+        "expected_value_readjusted": 79732.61154152399
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.004",
+    "description": "Armação aço CA-50/60 - Tubulão",
+    "un": "kg",
+    "budget": {
+      "amount": 10565.05,
+      "values": {
+        "unit": 5.8371,
+        "total": 61669.26,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 4801.815225,
+        "value": 28028.67867
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.3053,
+        "amount": 3225.509765,
+        "value": 18827.625078
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 61669.26,
+        "expected_value": 18827.625078,
+        "readjusted_value": 43338.5978870952,
+        "value_until_current_month": 62166.22296509521,
+        "expected_value_readjusted": 28254.548337635773
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.005",
+    "description": "Arrasamento de cabeça de tubulão",
+    "un": "un",
+    "budget": {
+      "amount": 71,
+      "values": {
+        "unit": 39.8223,
+        "total": 2827.38,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 32.2695,
+        "value": 1285.04421
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.17629999999999998,
+        "amount": 12.517299999999999,
+        "value": 498.467094
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2827.38,
+        "expected_value": 498.467094,
+        "readjusted_value": 2355.9282957096,
+        "value_until_current_month": 2854.3953897096003,
+        "expected_value_readjusted": 1297.3227046230134
+      }
+    }
+  },
+  {
+    "item_id": "05.002.000.006",
+    "description": "Carga e transporte de material excedente - Tubulão",
+    "un": "m3",
+    "budget": {
+      "amount": 820.79,
+      "values": {
+        "unit": 68.4445,
+        "total": 56178.56,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": 0.4545,
+        "amount": 373.049055,
+        "value": 25533.15552
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": 0.2892,
+        "amount": 237.372468,
+        "value": 16246.839552
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 56178.56,
+        "expected_value": 16246.839552,
+        "readjusted_value": 40394.9284051968,
+        "value_until_current_month": 56641.7679571968,
+        "expected_value_readjusted": 25743.683536545945
+      }
+    }
+  },
+  {
+    "item_id": "05.003.001.001",
+    "description": "Escavação manual",
+    "un": "m3",
+    "budget": {
+      "amount": 46.83,
+      "values": {
+        "unit": 170,
+        "total": 7961.1,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 7961.1,
+        "expected_value": null,
+        "readjusted_value": 8053.448760000001,
+        "value_until_current_month": 8053.448760000001,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.003.001.002",
+    "description": "Forma para Fundação",
+    "un": "m2",
+    "budget": {
+      "amount": 246.49,
+      "values": {
+        "unit": 60.5,
+        "total": 14912.65,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 14912.65,
+        "expected_value": null,
+        "readjusted_value": 15085.63674,
+        "value_until_current_month": 15085.63674,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.003.001.003",
+    "description": "Armação aço CA-50/60 (média dos diâmetros)",
+    "un": "kg",
+    "budget": {
+      "amount": 1873.32,
+      "values": {
+        "unit": 5.9491,
+        "total": 11144.57,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 11144.57,
+        "expected_value": null,
+        "readjusted_value": 11273.847012,
+        "value_until_current_month": 11273.847012,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.003.001.004",
+    "description": "Concreto usinado Fck = 30 Mpa Bombeado",
+    "un": "m3",
+    "budget": {
+      "amount": 23.41,
+      "values": {
+        "unit": 277.954,
+        "total": 6506.91,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 6506.91,
+        "expected_value": null,
+        "readjusted_value": 6582.390156,
+        "value_until_current_month": 6582.390156,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "05.003.001.005",
+    "description": "Carga e transporte de material excedente",
+    "un": "m3",
+    "budget": {
+      "amount": 65.57,
+      "values": {
+        "unit": 68.4445,
+        "total": 4487.91,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4487.91,
+        "expected_value": null,
+        "readjusted_value": 4539.969756,
+        "value_until_current_month": 4539.969756,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "06.000.000.001",
+    "description": "Forma compensado plastificado 18 mm. - reap. 10X",
+    "un": "m2",
+    "budget": {
+      "amount": 7237.57,
+      "values": {
+        "unit": 60.5,
+        "total": 437872.99,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 437872.99,
+        "expected_value": null,
+        "readjusted_value": 442952.316684,
+        "value_until_current_month": 442952.316684,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "06.000.000.002",
+    "description": "Armação aço CA-50/60 (média dos diâmetros)",
+    "un": "kg",
+    "budget": {
+      "amount": 64466.71,
+      "values": {
+        "unit": 6.0964,
+        "total": 393014.85,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 393014.85,
+        "expected_value": null,
+        "readjusted_value": 397573.82226,
+        "value_until_current_month": 397573.82226,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "06.000.000.003",
+    "description": "Concreto usinado Fck = 30 MPa Bombeado",
+    "un": "m3",
+    "budget": {
+      "amount": 805.83,
+      "values": {
+        "unit": 272.8,
+        "total": 219830.42,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 219830.42,
+        "expected_value": null,
+        "readjusted_value": 222380.45287200002,
+        "value_until_current_month": 222380.45287200002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "06.000.000.004",
+    "description": "Lançamento e sarrafeamento de piso",
+    "un": "m2",
+    "budget": {
+      "amount": 2934.61,
+      "values": {
+        "unit": 6.36,
+        "total": 18664.12,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 18664.12,
+        "expected_value": null,
+        "readjusted_value": 18880.623792,
+        "value_until_current_month": 18880.623792,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.001.000.001",
+    "description": "Alvenaria em tijolo cerâmico - 09x19x29 cm",
+    "un": "m2",
+    "budget": {
+      "amount": 285.59,
+      "values": {
+        "unit": 14.0011,
+        "total": 3998.57,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 3998.57,
+        "expected_value": null,
+        "readjusted_value": 4044.9534120000003,
+        "value_until_current_month": 4044.9534120000003,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.001.000.002",
+    "description": "Alvenaria em tijolo cerâmico - 14x19x29 cm",
+    "un": "m2",
+    "budget": {
+      "amount": 2731.92,
+      "values": {
+        "unit": 21.1001,
+        "total": 57643.79,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 57643.79,
+        "expected_value": null,
+        "readjusted_value": 58312.457964,
+        "value_until_current_month": 58312.457964,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.001.000.003",
+    "description": "Alvenaria de bloco cerâmico - 19x19x29 cm",
+    "un": "m2",
+    "budget": {
+      "amount": 632.17,
+      "values": {
+        "unit": 31.0615,
+        "total": 19636.15,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 19636.15,
+        "expected_value": null,
+        "readjusted_value": 19863.929340000002,
+        "value_until_current_month": 19863.929340000002,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.001.000.004",
+    "description": "Mão de obra alvenaria de bloco cerâmico",
+    "un": "m2",
+    "budget": {
+      "amount": 3991.67,
+      "values": {
+        "unit": 12.57,
+        "total": 50175.29,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 50175.29,
+        "expected_value": null,
+        "readjusted_value": 50757.323364,
+        "value_until_current_month": 50757.323364,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.002.000.001",
+    "description": "Muro sobre laje esp.: 14 cm",
+    "un": "m2",
+    "budget": {
+      "amount": 188.95,
+      "values": {
+        "unit": 52.8792,
+        "total": 9991.52,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 9991.52,
+        "expected_value": null,
+        "readjusted_value": 10107.421632000001,
+        "value_until_current_month": 10107.421632000001,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.002.000.002",
+    "description": "Mão de obra alvenaria de Muro sobre laje",
+    "un": "m2",
+    "budget": {
+      "amount": 188.95,
+      "values": {
+        "unit": 22.8644,
+        "total": 4320.23,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4320.23,
+        "expected_value": null,
+        "readjusted_value": 4370.344668,
+        "value_until_current_month": 4370.344668,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.002.000.003",
+    "description": "Muro sobre solo esp.: 14 cm",
+    "un": "m2",
+    "budget": {
+      "amount": 48.2,
+      "values": {
+        "unit": 54.453,
+        "total": 2624.63,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 2624.63,
+        "expected_value": null,
+        "readjusted_value": 2655.0757080000003,
+        "value_until_current_month": 2655.0757080000003,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.002.000.004",
+    "description": "Mão de obra alvenaria de Muro sobre solo",
+    "un": "m2",
+    "budget": {
+      "amount": 48.2,
+      "values": {
+        "unit": 91.6576,
+        "total": 4417.9,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 4417.9,
+        "expected_value": null,
+        "readjusted_value": 4469.14764,
+        "value_until_current_month": 4469.14764,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.003.000.001",
+    "description": "Encunhamento",
+    "un": "m3",
+    "budget": {
+      "amount": 4.71,
+      "values": {
+        "unit": 1344,
+        "total": 6330.24,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 6330.24,
+        "expected_value": null,
+        "readjusted_value": 6403.670784,
+        "value_until_current_month": 6403.670784,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.003.000.002",
+    "description": "Mão de obra de encunhamento",
+    "un": "m",
+    "budget": {
+      "amount": 1572.72,
+      "values": {
+        "unit": 3.93,
+        "total": 6180.79,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 6180.79,
+        "expected_value": null,
+        "readjusted_value": 6252.487164,
+        "value_until_current_month": 6252.487164,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.003.000.003",
+    "description": "Vergas e contra-vergas",
+    "un": "m3",
+    "budget": {
+      "amount": 14.24,
+      "values": {
+        "unit": 925.8528,
+        "total": 13184.15,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 13184.15,
+        "expected_value": null,
+        "readjusted_value": 13337.086140000001,
+        "value_until_current_month": 13337.086140000001,
+        "expected_value_readjusted": null
+      }
+    }
+  },
+  {
+    "item_id": "07.004.000.001",
+    "description": "Fechamento de shaft em drywall - Placa Standart",
+    "un": "un",
+    "budget": {
+      "amount": 10,
+      "values": {
+        "unit": 140,
+        "total": 1400,
+        "readjusted": {
+          "month": null,
+          "today": null
+        }
+      }
+    },
+    "accumulated": {
+      "expected": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "executed": {
+        "until_previous_month": null,
+        "until_current_month": null,
+        "amount": null,
+        "value": null
+      },
+      "readjusted_budget": {
+        "value_until_previous_month": 1400,
+        "expected_value": null,
+        "readjusted_value": 1416.24,
+        "value_until_current_month": 1416.24,
+        "expected_value_readjusted": null
+      }
+    }
+  }
+]

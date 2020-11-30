@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+
+# Packages
+packages/**/src/react-app-env.d.ts
+
+# Web
+packages/web/config
+packages/web/scripts
