@@ -1,5 +1,6 @@
-import { UnformErrors } from '@unform/core';
 import { ValidationError } from 'yup';
+
+import { UnformErrors } from '@unform/core';
 
 export default function getValidationError(err: ValidationError): UnformErrors {
   const validationErrors: UnformErrors = {};

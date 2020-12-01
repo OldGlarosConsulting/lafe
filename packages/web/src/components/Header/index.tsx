@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useRouter } from 'next/router';
+
 import {
   Flex,
   Image,
@@ -13,6 +15,8 @@ import {
 } from '@chakra-ui/core';
 
 const Header: React.FC = () => {
+  const router = useRouter();
+
   return (
     <Flex
       position="fixed"
@@ -29,13 +33,24 @@ const Header: React.FC = () => {
 
       <Flex height="100%" width="70%" justifyContent="space-between">
         <Button
+          onClick={() => {
+            router.replace('/macro-physics-dashboard');
+          }}
           height="100%"
           width="49.8%"
           backgroundColor="#f5f5f0"
           borderRadius={0}
           borderBottom="3px solid"
-          borderColor="blue.600"
-          color="blue.600"
+          borderColor={
+            router.pathname === '/macro-physics-dashboard'
+              ? 'blue.600'
+              : '#f5f5f0'
+          }
+          color={
+            router.pathname === '/macro-physics-dashboard'
+              ? 'blue.600'
+              : 'black'
+          }
           _hover={{
             bg: 'gray.200',
             color: 'black',
@@ -50,13 +65,20 @@ const Header: React.FC = () => {
           Analíse Física Macro
         </Button>
         <Button
+          onClick={() => {
+            router.replace('/management-dashboard');
+          }}
           height="100%"
           width="49.8%"
           backgroundColor="#f5f5f0"
           borderRadius={0}
           borderBottom="3px solid"
-          borderColor="#f5f5f0"
-          color="black"
+          borderColor={
+            router.pathname === '/management-dashboard' ? 'blue.600' : '#f5f5f0'
+          }
+          color={
+            router.pathname === '/management-dashboard' ? 'blue.600' : 'black'
+          }
           _hover={{
             bg: 'gray.200',
             color: 'black',

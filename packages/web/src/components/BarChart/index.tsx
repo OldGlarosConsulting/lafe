@@ -29,56 +29,52 @@ interface IConfigs {
 }
 
 const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
-  const [chartConfigs, setChartConfigs] = useState<IConfigs>({} as IConfigs);
-
-  useEffect(() => {
-    setChartConfigs({
-      series: data.bars,
-      options: {
-        chart: {
-          type: 'bar',
-          height: 350,
+  const [chartConfigs, setChartConfigs] = useState<IConfigs>({
+    series: data.bars,
+    options: {
+      chart: {
+        type: 'bar',
+        height: 350,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '55%',
+          endingShape: 'rounded',
         },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded',
-          },
-        },
+      },
+      title: {
+        text: title,
+        align: 'center',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent'],
+      },
+      xaxis: {
+        categories: data.categories,
+      },
+      yaxis: {
         title: {
-          text: title,
-          align: 'center',
+          text: '% (porcentagem)',
         },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent'],
-        },
-        xaxis: {
-          categories: data.categories,
-        },
-        yaxis: {
-          title: {
-            text: '% (porcentagem)',
-          },
-        },
-        fill: {
-          opacity: 1,
-        },
-        tooltip: {
-          y: {
-            formatter(val) {
-              return `${val}%`;
-            },
+      },
+      fill: {
+        opacity: 1,
+      },
+      tooltip: {
+        y: {
+          formatter(val) {
+            return `${val}%`;
           },
         },
       },
-    });
-  }, [title, data]);
+    },
+  });
 
   return (
     <Box

@@ -29,83 +29,80 @@ interface IConfigs {
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
-  const [chartConfigs, setChartConfigs] = useState<IConfigs>({} as IConfigs);
-
-  useEffect(() => {
-    setChartConfigs({
-      series: data.bars,
-      options: {
-        chart: {
-          type: 'line',
-          height: 350,
-          zoom: {
-            enabled: false,
-          },
-        },
-        dataLabels: {
+  const [chartConfigs, setChartConfigs] = useState<IConfigs>({
+    series: data.bars,
+    options: {
+      chart: {
+        type: 'line',
+        height: 350,
+        zoom: {
           enabled: false,
         },
-        stroke: {
-          width: [5, 7, 5],
-          curve: 'straight',
-          dashArray: [0, 8, 5],
-        },
-        title: {
-          text: title,
-          align: 'center',
-        },
-        legend: {
-          tooltipHoverFormatter(val, opts) {
-            return `${val} - ${
-              opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex]
-            }`;
-          },
-        },
-        markers: {
-          size: 0,
-          hover: {
-            sizeOffset: 6,
-          },
-        },
-        xaxis: {
-          categories: data.categories,
-        },
-        yaxis: {
-          title: {
-            text: '% (porcentagem)',
-          },
-        },
-        tooltip: {
-          y: [
-            {
-              title: {
-                formatter(val) {
-                  return `${val}%`;
-                },
-              },
-            },
-            {
-              title: {
-                formatter(val) {
-                  return `${val}%`;
-                },
-              },
-            },
-            {
-              title: {
-                formatter(val) {
-                  return val;
-                },
-              },
-            },
-          ],
-        },
-        grid: {
-          borderColor: '#f1f1f1',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        width: [5, 7, 5],
+        curve: 'straight',
+        dashArray: [0, 8, 5],
+      },
+      title: {
+        text: title,
+        align: 'center',
+      },
+      legend: {
+        tooltipHoverFormatter(val, opts) {
+          return `${val} - ${
+            opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex]
+          }`;
         },
       },
-    });
-  }, [title, data]);
+      markers: {
+        size: 0,
+        hover: {
+          sizeOffset: 6,
+        },
+      },
+      xaxis: {
+        categories: data.categories,
+      },
+      yaxis: {
+        title: {
+          text: '% (porcentagem)',
+        },
+      },
+      tooltip: {
+        y: [
+          {
+            title: {
+              formatter(val) {
+                return `${val}%`;
+              },
+            },
+          },
+          {
+            title: {
+              formatter(val) {
+                return `${val}%`;
+              },
+            },
+          },
+          {
+            title: {
+              formatter(val) {
+                return val;
+              },
+            },
+          },
+        ],
+      },
+      grid: {
+        borderColor: '#f1f1f1',
+      },
+    },
+  });
+
   return (
     <Box
       width="100%"

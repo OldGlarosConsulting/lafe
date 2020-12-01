@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function getTimeZone() {\n  return Intl.DateTimeFormat().resolvedOptions().timeZone;\n}","map":null,"metadata":{},"sourceType":"module"}

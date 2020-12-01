@@ -80,7 +80,7 @@ const AuthenticationProvider: React.FC = ({ children }) => {
     }
 
     if (isRoute('/') || isRoute('/login') || isRoute('/app')) {
-      router.replace('/dashboard');
+      router.replace('/macro-physics-dashboard');
       return;
     }
 

@@ -49,7 +49,7 @@ const Login: React.FC = () => {
           duration: 3000,
         });
 
-        router.replace('/dashboard');
+        router.replace('/macro-physics-dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
