@@ -35,7 +35,7 @@ const Table = <T extends object>({
   heading,
   columns,
   data,
-  pageSize: initialPageSize = 10,
+  pageSize: initialPageSize = 5,
   onRowClick,
   ...rest
 }: ITableProps<T>) => {
@@ -78,7 +78,11 @@ const Table = <T extends object>({
       width="100%"
       {...rest}
     >
-      {heading && <TopSection>{heading}</TopSection>}
+      {heading && (
+        <TopSection alignItems="center" fontWeight="bold">
+          {heading}
+        </TopSection>
+      )}
 
       <StyledTable {...getTableProps()}>
         <TableHead>
@@ -92,6 +96,7 @@ const Table = <T extends object>({
               {headerGroup.headers.map(column => (
                 <TableCell
                   p={4}
+                  width={column.width}
                   key={column.id}
                   bg="gray.50"
                   justifyContent="space-between"
@@ -163,8 +168,7 @@ const Table = <T extends object>({
 
         <Flex justifyContent="center" alignItems="center">
           <Text mr={4}>
-            Página
-{' '}
+            Página{' '}
             <strong>
               {pageIndex + 1} de
               {pageOptions.length}

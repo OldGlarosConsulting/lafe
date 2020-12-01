@@ -1,4 +1,4 @@
-import novemberBuild from './november/november-build';
+import septemberBuild from './september/september-build';
 
 interface IMainActivities {
   item: string;
@@ -30,4 +30,4 @@ interface IMonthBuild {
   }>;
 }
 
-export default { build: 'build33', months: [novemberBuild] } as IMonthBuild;
+export default { build: 'build33', months: [septemberBuild] } as IMonthBuild;

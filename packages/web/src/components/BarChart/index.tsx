@@ -78,7 +78,7 @@ const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
         },
       },
     });
-  }, [data]);
+  }, [title, data]);
 
   return (
     <Box

@@ -7,7 +7,6 @@ import DashedChart from '@/components/DashedChart';
 import Header from '@/components/Header';
 import Select from '@/components/Select';
 import SEO from '@/components/SEO';
-import Sidebar from '@/components/Sidebar';
 import Table from '@/components/Table';
 import Title from '@/components/Title';
 import { Box, Button, Flex, Text, Tooltip } from '@chakra-ui/core';
@@ -69,6 +68,10 @@ const SUMMARY_OF_AHEAD_ACTIVITIES = [
     Header: <Text color="blue.500">% Real. Até a data</Text>,
     accessor: 'real',
   },
+  {
+    Header: <Text color="blue.500">% Desvio</Text>,
+    accessor: 'physical_deviation',
+  },
 ] as Column[];
 
 const SUMMARY_OF_LATE_ACTIVITIES = [
@@ -88,6 +91,10 @@ const SUMMARY_OF_LATE_ACTIVITIES = [
     Header: <Text color="red.500">% Real. Até a data</Text>,
     accessor: 'real',
   },
+  {
+    Header: <Text color="red.500">% Desvio</Text>,
+    accessor: 'physical_deviation',
+  },
 ] as Column[];
 
 const Dashboad: React.FC = () => {
@@ -95,8 +102,6 @@ const Dashboad: React.FC = () => {
 
   const [selectedBuild, setSelectedBuild] = useState(data[0].months[0]);
   const [selectedMonth, setSelectedMonth] = useState(data[0].months[0].month);
-
-  console.log(selectedBuild.build);
 
   return (
     <>
@@ -109,13 +114,10 @@ const Dashboad: React.FC = () => {
 
       <Header />
 
-      <Sidebar />
-
       <Box
         as="main"
         maxWidth="100vw"
-        paddingLeft="7rem"
-        paddingRight={{ xs: 12, lg: 8 }}
+        paddingX={{ xs: 12, lg: 8 }}
         paddingTop={20}
       >
         <Flex color="white" direction="column">
@@ -129,7 +131,9 @@ const Dashboad: React.FC = () => {
               flexDirection: 'row',
             }}
             ref={formRef}
-            onSubmit={() => {}}
+            onSubmit={() => {
+              console.log('ok');
+            }}
           >
             <Select
               height={8}
@@ -176,51 +180,49 @@ const Dashboad: React.FC = () => {
           </Form>
         </Flex>
 
-        <Flex marginTop={6} display="grid" gridTemplateColumns="60% 40%">
+        <Flex marginTop={6} direction="column">
           <Box>
             <Table data={selectedBuild.general} columns={GENERAL} />
-            <BarChart
-              title="Dispesas Diretas - Previstas X Realizadas"
-              data={selectedBuild.directExpenses}
-            />
-            <DashedChart
-              title="Dispesas Diretas - Previstas X Realizadas"
-              data={selectedBuild.directExpenses}
-            />
           </Box>
 
-          <Flex marginLeft={6} direction="column">
-            <Flex
-              direction="column"
-              padding={4}
-              backgroundColor="white"
-              borderRadius="md"
-              height="100%"
+          <Flex
+            marginTop={6}
+            direction="column"
+            padding={4}
+            backgroundColor="white"
+            borderRadius="md"
+            height="100%"
+          >
+            <Text
+              textAlign="center"
+              fontWeight="bold"
+              fontSize={20}
+              marginBottom={2}
             >
-              <Text
-                textAlign="center"
-                fontWeight="bold"
-                fontSize={20}
-                marginBottom={2}
-              >
-                Principais Atividades Resumo
-              </Text>
-              <Table
-                marginBottom={6}
-                title="Resumo das Principais Atividades"
-                data={selectedBuild.lateActivities}
-                columns={SUMMARY_OF_LATE_ACTIVITIES}
-              />
+              Principais Atividades Resumo
+            </Text>
+            <Table
+              title="Resumo das Principais Atividades"
+              data={selectedBuild.lateActivities}
+              columns={SUMMARY_OF_LATE_ACTIVITIES}
+            />
 
-              <Table
-                title="Principais Atividades Resumo"
-                data={selectedBuild.aheadActivities}
-                columns={SUMMARY_OF_AHEAD_ACTIVITIES}
-              />
-            </Flex>
+            <Table
+              title="Principais Atividades Resumo"
+              data={selectedBuild.aheadActivities}
+              columns={SUMMARY_OF_AHEAD_ACTIVITIES}
+            />
           </Flex>
         </Flex>
         <Flex marginTop={6} direction="column">
+          <BarChart
+            title="Dispesas Diretas - Previstas X Realizadas"
+            data={selectedBuild.directExpenses}
+          />
+          <DashedChart
+            title="Dispesas Diretas - Previstas X Realizadas"
+            data={selectedBuild.directExpenses}
+          />
           <BarChart
             title="Despesas Totais (DD+DI) - Previstas x Realizadas"
             data={selectedBuild.totalExpenses}

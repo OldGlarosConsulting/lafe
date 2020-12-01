@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Flex, IconButton } from '@chakra-ui/core';
-import styled from '@emotion/styled';
 import {
   color,
   ColorProps,
@@ -10,6 +8,13 @@ import {
   space,
   SpaceProps,
 } from 'styled-system';
+
+import { Flex, IconButton } from '@chakra-ui/core';
+import styled from '@emotion/styled';
+
+interface ISpaceProps extends SpaceProps {
+  width: string;
+}
 
 export const StyledTable = styled.div<SpaceProps>`
   ${space};
@@ -31,7 +36,7 @@ export const TableHead = styled.div<SpaceProps>`
 
 export const TableCell = styled<
   'div',
-  SpaceProps & ColorProps & JustifyContentProps
+  ISpaceProps & ColorProps & JustifyContentProps
 >('div')`
   ${space};
   ${color};

@@ -56,14 +56,11 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-curly-newline": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_|^next$"
-      }
-    ],
+    "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-filename-extension": [
       "warn",
       {

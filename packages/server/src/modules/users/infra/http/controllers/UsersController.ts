@@ -6,7 +6,7 @@ import CreateUserService from '@modules/users/services/CreateUserService';
 
 export default class UsersController {
   public async create(request: Request, response: Response): Promise<Response> {
-    const { name, email, username, password, referred_by } = request.body;
+    const { name, email, username, password } = request.body;
 
     const createUser = container.resolve(CreateUserService);
 
@@ -15,7 +15,6 @@ export default class UsersController {
       email,
       username,
       password,
-      referred_by,
     });
 
     return response.json(classToClass(user));
