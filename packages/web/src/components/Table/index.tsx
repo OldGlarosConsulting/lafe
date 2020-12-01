@@ -96,6 +96,7 @@ const Table = <T extends object>({
               {headerGroup.headers.map(column => (
                 <TableCell
                   p={4}
+                  width={column.width}
                   key={column.id}
                   bg="gray.50"
                   justifyContent="space-between"

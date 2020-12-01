@@ -15,37 +15,6 @@ import { Form } from '@unform/web';
 
 import data from '../mocks/macro-dashboard/data';
 
-const FINANCIAL_ANALYSIS = [
-  {
-    Header: <Text color="blue.500">Código</Text>,
-    accessor: 'id',
-  },
-  {
-    Header: <Text color="blue.500">Descrição</Text>,
-    accessor: 'description',
-  },
-  {
-    Header: <Text color="blue.500">% Medido</Text>,
-    accessor: 'measured',
-  },
-  {
-    Header: <Text color="blue.500">Valor Orçado</Text>,
-    accessor: 'budget',
-  },
-  {
-    Header: <Text color="blue.500">Peso</Text>,
-    accessor: 'weight',
-  },
-  {
-    Header: 'Desvio físico',
-    accessor: 'physical_deviation',
-  },
-  {
-    Header: <Text color="green.500">Obra adiantada (em dias)</Text>,
-    accessor: 'performed_monthly_physicist',
-  },
-] as Column[];
-
 const SUMMARY_OF_AHEAD_ACTIVITIES = [
   {
     Header: <Text color="blue.500">Item</Text>,
@@ -97,6 +66,53 @@ const Dashboad: React.FC = () => {
 
   const [selectedBuild, setSelectedBuild] = useState(data[0].months[0]);
   const [selectedMonth, setSelectedMonth] = useState(data[0].months[0].month);
+
+  const FINANCIAL_ANALYSIS = React.useMemo(
+    () => [
+      {
+        Header: 'Código',
+        accessor: 'id',
+      },
+      {
+        Header: 'Descrição',
+        accessor: 'description',
+      },
+      {
+        Header: '% Medido',
+        accessor: 'measured',
+      },
+      {
+        Header: 'Valor Orçado',
+        accessor: 'budget',
+      },
+      {
+        Header: 'Peso',
+        accessor: 'weight',
+      },
+      {
+        Header: 'Info',
+        columns: [
+          {
+            Header: 'Age',
+            accessor: 'age',
+          },
+          {
+            Header: 'Visits',
+            accessor: 'visits',
+          },
+          {
+            Header: 'Status',
+            accessor: 'status',
+          },
+          {
+            Header: 'Profile Progress',
+            accessor: 'progress',
+          },
+        ],
+      },
+    ],
+    [],
+  );
 
   return (
     <>
@@ -179,8 +195,8 @@ const Dashboad: React.FC = () => {
           <Box>
             <Table
               heading="Análise Financeira"
-              data={selectedBuild.general}
-              columns={GENERAL}
+              data={[]}
+              columns={FINANCIAL_ANALYSIS}
             />
           </Box>
 
