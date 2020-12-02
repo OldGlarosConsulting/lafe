@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { Column } from 'react-table';
 
@@ -9,11 +9,14 @@ import Select from '@/components/Select';
 import SEO from '@/components/SEO';
 import Table from '@/components/Table';
 import Title from '@/components/Title';
+import formatPercentageNumber from '@/utils/formatPercentageNumber';
+import formatRealValue from '@/utils/formatRealValue';
+import getMonthNameByIndex from '@/utils/getMonthNameByIndex';
 import { Box, Button, Flex, Text, Tooltip } from '@chakra-ui/core';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
-import data from '../mocks/management-dashboard/data';
+import builds from '../mocks/management-dashboard/data';
 
 interface IDirectFinacialsAnalysis {
   id: string;
@@ -198,48 +201,52 @@ const SUMMARY_OF_PROJECTIONS_BUDGET = [
   },
 ] as Column[];
 
-const Dashboad: React.FC = () => {
+const Dashboard: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const [selectedBuild, setSelectedBuild] = useState({
-    month: data[0].months[0].month,
-    build: data[0].months[0].month,
-    directExpenses: useMemo(
-      () =>
-        data[0].months[0].directExpenses.map(expense => ({
-          id: expense.id,
-          description: expense.description,
-          percent_measured: expense.percent_measured.toLocaleString('pt-br', {
-            style: 'percent',
-            minimumFractionDigits: 2,
-          }),
-          budget: expense.budget.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-          weight: expense.weight.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-          measured: expense.measured.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-          payments: expense.payments.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-          money_available: expense.money_available.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-          projection: expense.projection.toLocaleString('pt-br', {
-            currency: 'BRL',
-          }),
-        })),
-      [],
-    ),
-    indirectExpenses: data[0].months[0].indirectExpenses,
-    summaryOfProjectionsBudget: data[0].months[0].summaryOfProjectionsBudget,
-    summaryOfProjectionsBudgetChart:
-      data[0].months[0].summaryOfProjectionsBudgetChart,
-  });
-  const [selectedMonth, setSelectedMonth] = useState(data[0].months[0].month);
+  const firstBuild = useMemo(() => builds[0], []);
+  const firstMonth = useMemo(() => {
+    return firstBuild.months[0];
+  }, [firstBuild.months]);
+
+  const [selectedBuildId, setSelectedBuildId] = useState(firstBuild.id);
+  const [selectedMonth, setSelectedMonth] = useState(firstMonth.month_index);
+
+  const selectedBuild = useMemo(() => {
+    const findBuild = builds.find(build => build.id === selectedBuildId);
+
+    return findBuild;
+  }, [selectedBuildId]);
+
+  const selectedBuildWithMonth = useMemo(() => {
+    const findMonthIndex = selectedBuild.months.findIndex(
+      month => month.month_index === selectedMonth,
+    );
+
+    return selectedBuild.months[findMonthIndex];
+  }, [selectedBuild, selectedMonth]);
+
+  /* {
+    month: firstMonth.month,
+    build: firstMonth.month,
+    indirectExpenses: firstMonth.indirectExpenses,
+    summaryOfProjectionsBudget: firstMonth.summaryOfProjectionsBudget,
+    summaryOfProjectionsBudgetChart: firstMonth.summaryOfProjectionsBudgetChart,
+  } */
+
+  const formattedDirectExpenses = useMemo(() => {
+    return selectedBuildWithMonth.directExpenses.map(expense => ({
+      id: expense.id,
+      description: expense.description,
+      percent_measured: formatPercentageNumber(expense.percent_measured),
+      budget: formatRealValue(expense.budget),
+      weight: formatRealValue(expense.weight),
+      measured: formatRealValue(expense.measured),
+      payments: formatRealValue(expense.payments),
+      money_available: formatRealValue(expense.money_available),
+      projection: formatRealValue(expense.projection),
+    }));
+  }, [selectedBuildWithMonth]);
 
   return (
     <>
@@ -275,7 +282,7 @@ const Dashboad: React.FC = () => {
           >
             <Select
               height={8}
-              value={selectedBuild.build}
+              value={selectedBuildWithMonth.build}
               backgroundColor="white"
               name="construction"
               placeholder="Selecione a obra"
@@ -285,10 +292,19 @@ const Dashboad: React.FC = () => {
                 borderColor: 'gray.400',
                 bg: 'white',
               }}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                const { value } = event.currentTarget;
+
+                if (!value) {
+                  return;
+                }
+
+                setSelectedBuildId(value);
+              }}
             >
-              <option value="build33">Obra33</option>
-              <option value="build34">Obra34</option>
-              <option value="build35">Obra35</option>
+              {builds.map(build => (
+                <option value={build.id}>{build.build}</option>
+              ))}
             </Select>
 
             <Select
@@ -304,17 +320,24 @@ const Dashboad: React.FC = () => {
                 borderColor: 'gray.400',
                 bg: 'white',
               }}
-            >
-              <option value="september">Setembro</option>
-              <option value="october">Outubro</option>
-              <option value="november">Novembro</option>
-            </Select>
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                const { value } = event.currentTarget;
 
-            <Tooltip label="Filtrar resultados" aria-label="Filtrar resultados">
-              <Button marginLeft={4} height={10} type="submit">
-                <FiSearch color="Black" size={40} />
-              </Button>
-            </Tooltip>
+                if (!value) {
+                  return;
+                }
+
+                setSelectedMonth(value);
+              }}
+            >
+              {selectedBuild.months.map(month => {
+                return (
+                  <option value={month.month_index}>
+                    {getMonthNameByIndex(Number(month.month_index))}
+                  </option>
+                );
+              })}
+            </Select>
           </Form>
         </Flex>
 
@@ -337,12 +360,12 @@ const Dashboad: React.FC = () => {
             </Text>
             <Table
               heading="Despesas Diretas"
-              data={selectedBuild.directExpenses}
+              data={formattedDirectExpenses}
               columns={FINANCIAL_ANALYSIS}
             />
             <Table
               heading="Despesas Indiretas"
-              data={selectedBuild.indirectExpenses}
+              data={selectedBuildWithMonth.indirectExpenses}
               columns={DIRECT_EXPENSES}
             />
           </Flex>
@@ -364,13 +387,13 @@ const Dashboad: React.FC = () => {
               SÍNTESE DAS PROJEÇÕES x ORÇAMENTO
             </Text>
             <Table
-              data={selectedBuild.summaryOfProjectionsBudget}
+              data={selectedBuildWithMonth.summaryOfProjectionsBudget}
               columns={SUMMARY_OF_PROJECTIONS_BUDGET}
             />
             <BarChart
               sideText=""
               title="SÍNTESE DAS PROJEÇÕES x ORÇAMENTO"
-              data={selectedBuild.summaryOfProjectionsBudgetChart}
+              data={selectedBuildWithMonth.summaryOfProjectionsBudgetChart}
             />
           </Flex>
         </Flex>
@@ -397,4 +420,4 @@ const Dashboad: React.FC = () => {
   );
 };
 
-export default Dashboad;
+export default Dashboard;

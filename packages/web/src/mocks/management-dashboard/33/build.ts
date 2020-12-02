@@ -36,10 +36,11 @@ interface IChartData {
 }
 
 interface IMonthBuild {
+  id: string;
   build: string;
   months: Array<{
     build: string;
-    month: string;
+    month_index: string;
     directExpenses: IDirectFinacialsAnalysis[];
     indirectExpenses: IDirectFinacialsAnalysis[];
     summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
@@ -47,4 +48,8 @@ interface IMonthBuild {
   }>;
 }
 
-export default { build: 'build33', months: [septemberBuild] } as IMonthBuild;
+export default {
+  id: 'build33',
+  build: 'Obra 33',
+  months: [septemberBuild],
+} as IMonthBuild;

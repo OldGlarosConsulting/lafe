@@ -36,10 +36,11 @@ interface IChartData {
 }
 
 interface IMonthBuild {
+  id: string;
   build: string;
   months: Array<{
     build: string;
-    month: string;
+    month_index: string;
     directExpenses: IDirectFinacialsAnalysis[];
     indirectExpenses: IDirectFinacialsAnalysis[];
     summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];

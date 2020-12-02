@@ -45,7 +45,7 @@ interface IChartData {
 
 interface IBuild {
   build: string;
-  month: string;
+  month_index: string;
   directExpenses: IFinacialsAnalysis[];
   indirectExpenses: IFinacialsAnalysis[];
   summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
@@ -54,7 +54,7 @@ interface IBuild {
 
 export default {
   build: 'build33',
-  month: 'september',
+  month_index: '9',
   directExpenses,
   indirectExpenses,
   summaryOfProjectionsBudget,

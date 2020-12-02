@@ -60,7 +60,7 @@ export const TableCell = styled<
       display: initial;
 
       & + th {
-        border-left: 1px solid #000;
+        border-left: 1px solid #e2e8f0;
       }
     `}
 `;
