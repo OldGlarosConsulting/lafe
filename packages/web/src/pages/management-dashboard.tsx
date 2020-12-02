@@ -70,24 +70,29 @@ const Dashboad: React.FC = () => {
   const FINANCIAL_ANALYSIS = React.useMemo(
     () => [
       {
-        Header: 'Código',
-        accessor: 'id',
-      },
-      {
-        Header: 'Descrição',
-        accessor: 'description',
-      },
-      {
-        Header: '% Medido',
-        accessor: 'measured',
-      },
-      {
-        Header: 'Valor Orçado',
-        accessor: 'budget',
-      },
-      {
-        Header: 'Peso',
-        accessor: 'weight',
+        Header: '.',
+        columns: [
+          {
+            Header: 'Código',
+            accessor: 'id',
+          },
+          {
+            Header: 'Descrição',
+            accessor: 'description',
+          },
+          {
+            Header: '% Medido',
+            accessor: 'measured',
+          },
+          {
+            Header: 'Valor Orçado',
+            accessor: 'budget',
+          },
+          {
+            Header: 'Peso',
+            accessor: 'weight',
+          },
+        ],
       },
       {
         Header: 'Info',

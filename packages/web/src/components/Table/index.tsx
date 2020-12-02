@@ -8,7 +8,14 @@ import {
   FiChevronUp,
 } from 'react-icons/fi';
 import { useMediaQuery } from 'react-responsive';
-import { Column, Row, usePagination, useSortBy, useTable } from 'react-table';
+import {
+  Column,
+  HeaderGroup,
+  Row,
+  usePagination,
+  useSortBy,
+  useTable,
+} from 'react-table';
 
 import { BoxProps, Flex, Text } from '@chakra-ui/core';
 
@@ -88,38 +95,53 @@ const Table = <T extends object>({
         <TableHead>
           {headerGroups.map(headerGroup => (
             <Flex
+              as="tr"
               key={headerGroup.id}
               flex={1}
               flexDirection="row"
               {...headerGroup.getHeaderGroupProps()}
             >
-              {headerGroup.headers.map(column => (
-                <TableCell
-                  p={4}
-                  width={column.width}
-                  key={column.id}
-                  bg="gray.50"
-                  justifyContent="space-between"
-                  {...column.getHeaderProps()}
-                  {...column.getSortByToggleProps()}
-                >
-                  <Text fontWeight="bold">{column.render('Header')}</Text>
+              {headerGroup.headers.map((column: any) => {
+                console.log(column);
 
-                  {(() => {
-                    if (column.isSorted) {
-                      if (column.isSortedDesc) {
-                        return <FiChevronDown size={20} />;
+                return (
+                  <TableCell
+                    as="th"
+                    p={4}
+                    width={column.width}
+                    key={column.id}
+                    bg="gray.50"
+                    justifyContent="space-between"
+                    headerGroup={column.depth === 0 && column.columns}
+                    {...column.getHeaderProps()}
+                    {...column.getSortByToggleProps()}
+                  >
+                    <Text fontWeight="bold">{column.render('Header')}</Text>
+
+                    {(() => {
+                      if (column.isSorted) {
+                        if (column.isSortedDesc) {
+                          return <FiChevronDown size={20} />;
+                        }
+
+                        return <FiChevronUp size={20} />;
                       }
 
-                      return <FiChevronUp size={20} />;
-                    }
-
-                    return '';
-                  })()}
-                </TableCell>
-              ))}
+                      return '';
+                    })()}
+                  </TableCell>
+                );
+              })}
             </Flex>
           ))}
+
+          {/* {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+              ))}
+            </tr>
+          ))} */}
         </TableHead>
 
         <Flex flexDirection="column">
@@ -170,8 +192,7 @@ const Table = <T extends object>({
           <Text mr={4}>
             Página{' '}
             <strong>
-              {pageIndex + 1} de
-              {pageOptions.length}
+              {pageIndex + 1} de {pageOptions.length}
             </strong>
           </Text>
 

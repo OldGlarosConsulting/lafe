@@ -10,17 +10,17 @@ import {
 } from 'styled-system';
 
 import { Flex, IconButton } from '@chakra-ui/core';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 interface ISpaceProps extends SpaceProps {
   width: string;
 }
 
-export const StyledTable = styled.div<SpaceProps>`
+export const StyledTable = styled.table<SpaceProps>`
   ${space};
   flex: 1;
   width: 100%;
-  display: flex;
   max-width: 100%;
   overflow-x: auto;
   border-radius: 4px;
@@ -28,15 +28,18 @@ export const StyledTable = styled.div<SpaceProps>`
   box-sizing: border-box;
 `;
 
-export const TableHead = styled.div<SpaceProps>`
+export const TableHead = styled.thead<SpaceProps>`
   ${space};
-  display: flex;
   flex-direction: row;
 `;
 
 export const TableCell = styled<
   'div',
-  ISpaceProps & ColorProps & JustifyContentProps
+  ISpaceProps &
+    ColorProps &
+    JustifyContentProps & {
+      headerGroup: boolean;
+    }
 >('div')`
   ${space};
   ${color};
@@ -48,6 +51,16 @@ export const TableCell = styled<
   border-bottom-width: 1px;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  ${props =>
+    props.headerGroup &&
+    css`
+      display: initial;
+
+      & + th {
+        border-left: 1px solid #000;
+      }
+    `}
 `;
 
 export const TableRow = styled(Flex)`

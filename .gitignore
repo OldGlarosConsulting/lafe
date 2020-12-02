@@ -1,4 +1,25 @@
-# Logs
+# production
+**/dist
+**/build
+
+# dotenv environment variables file
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# dependencies
+**/node_modules
+**/.pnp
+.pnp.js
+
+# next.js
+**/.next
+**/out
+
+# logs
 logs
 *.log
 npm-debug.log*
@@ -6,21 +27,16 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Dependency directories
-node_modules
+# testing
+**/coverage
 
-# Build
-dist
-build
+# vercel
+**/.vercel
 
-# Coverage directory used by tools like istanbul
-coverage
-*.lcov
+# misc
+.DS_Store
+*.pem
 
-# Environment/Config
-.env
+# misc
 ormconfig.json
 docker-compose.yml
-
-# MacOS
-.DS_STORE
