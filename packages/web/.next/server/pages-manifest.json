@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/macro-physics-dashboard": "pages/macro-physics-dashboard.js",
   "/management-dashboard": "pages/management-dashboard.js"
 }

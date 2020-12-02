@@ -17,6 +17,7 @@ interface IBarChartProps extends ApexChartProps {
     }>;
     categories: Array<string>;
   };
+  sideText: string;
 }
 
 interface IConfigs {
@@ -28,7 +29,7 @@ interface IConfigs {
   options: object;
 }
 
-const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
+const ApexBarChart: React.FC<IBarChartProps> = ({ sideText, data, title }) => {
   const [chartConfigs, setChartConfigs] = useState<IConfigs>({
     series: data.bars,
     options: {
@@ -60,7 +61,7 @@ const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
       },
       yaxis: {
         title: {
-          text: '% (porcentagem)',
+          text: sideText,
         },
       },
       fill: {
@@ -69,7 +70,7 @@ const ApexBarChart: React.FC<IBarChartProps> = ({ data, title }) => {
       tooltip: {
         y: {
           formatter(val) {
-            return `${val}%`;
+            return `${val}`;
           },
         },
       },

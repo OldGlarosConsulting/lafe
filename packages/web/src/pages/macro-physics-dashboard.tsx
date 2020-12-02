@@ -216,6 +216,7 @@ const Dashboad: React.FC = () => {
         </Flex>
         <Flex marginTop={6} direction="column">
           <BarChart
+            sideText="% (porcentagem)"
             title="Dispesas Diretas - Previstas X Realizadas"
             data={selectedBuild.directExpenses}
           />
@@ -224,6 +225,7 @@ const Dashboad: React.FC = () => {
             data={selectedBuild.directExpenses}
           />
           <BarChart
+            sideText="% (porcentagem)"
             title="Despesas Totais (DD+DI) - Previstas x Realizadas"
             data={selectedBuild.totalExpenses}
           />

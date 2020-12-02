@@ -22,6 +22,7 @@ export const StyledTable = styled.table<SpaceProps>`
   flex: 1;
   width: 100%;
   max-width: 100%;
+  display: flex;
   overflow-x: auto;
   border-radius: 4px;
   flex-direction: column;
@@ -55,6 +56,7 @@ export const TableCell = styled<
   ${props =>
     props.headerGroup &&
     css`
+      color: #3182ce;
       display: initial;
 
       & + th {

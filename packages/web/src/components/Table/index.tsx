@@ -86,7 +86,7 @@ const Table = <T extends object>({
       {...rest}
     >
       {heading && (
-        <TopSection alignItems="center" fontWeight="bold">
+        <TopSection alignItems="center" color="red.500" fontWeight="bold">
           {heading}
         </TopSection>
       )}
@@ -102,8 +102,6 @@ const Table = <T extends object>({
               {...headerGroup.getHeaderGroupProps()}
             >
               {headerGroup.headers.map((column: any) => {
-                console.log(column);
-
                 return (
                   <TableCell
                     as="th"
