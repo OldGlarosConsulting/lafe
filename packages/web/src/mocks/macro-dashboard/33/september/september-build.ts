@@ -7,9 +7,9 @@ import lateActivities from './tables/summary-of-main-activities/late-activities'
 interface IMainActivities {
   item: string;
   activity: string;
-  prev: string;
-  real: string;
-  physical_deviation: string;
+  prev: number;
+  real: number;
+  physical_deviation: number;
 }
 
 interface IChartData {
@@ -23,7 +23,7 @@ interface IChartData {
 
 interface IBuild {
   build: string;
-  month: string;
+  month_index: string;
   directExpenses: IChartData;
   totalExpenses: IChartData;
   general: Array<object>;
@@ -33,7 +33,7 @@ interface IBuild {
 
 export default {
   build: 'build33',
-  month: 'september',
+  month_index: '9',
   directExpenses,
   totalExpenses,
   general,

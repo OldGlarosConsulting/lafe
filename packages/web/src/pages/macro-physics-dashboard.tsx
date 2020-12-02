@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { Column } from 'react-table';
 
@@ -9,16 +9,14 @@ import Select from '@/components/Select';
 import SEO from '@/components/SEO';
 import Table from '@/components/Table';
 import Title from '@/components/Title';
+import formatPercentageNumber from '@/utils/formatPercentageNumber';
+import formatRealValue from '@/utils/formatRealValue';
+import getMonthNameByIndex from '@/utils/getMonthNameByIndex';
 import { Box, Button, Flex, Text, Tooltip } from '@chakra-ui/core';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
-import data from '../mocks/macro-dashboard/data';
-
-interface IFormData {
-  email: string;
-  password: string;
-}
+import builds from '../mocks/macro-dashboard/data';
 
 const GENERAL = [
   {
@@ -97,11 +95,50 @@ const SUMMARY_OF_LATE_ACTIVITIES = [
   },
 ] as Column[];
 
-const Dashboad: React.FC = () => {
+const Dashboard: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const [selectedBuild, setSelectedBuild] = useState(data[0].months[0]);
-  const [selectedMonth, setSelectedMonth] = useState(data[0].months[0].month);
+  const firstBuild = useMemo(() => builds[0], []);
+  const firstMonth = useMemo(() => {
+    return firstBuild.months[0];
+  }, [firstBuild.months]);
+
+  const [selectedBuildId, setSelectedBuildId] = useState(firstBuild.id);
+  const [selectedMonth, setSelectedMonth] = useState(firstMonth.month_index);
+
+  const selectedBuild = useMemo(() => {
+    const findBuild = builds.find(build => build.id === selectedBuildId);
+
+    return findBuild;
+  }, [selectedBuildId]);
+
+  const selectedBuildWithMonth = useMemo(() => {
+    const findMonthIndex = selectedBuild.months.findIndex(
+      month => month.month_index === selectedMonth,
+    );
+
+    return selectedBuild.months[findMonthIndex];
+  }, [selectedBuild, selectedMonth]);
+
+  const formattedAheadActivities = useMemo(() => {
+    return selectedBuildWithMonth.aheadActivities.map(row => ({
+      item: row.item,
+      activity: row.activity,
+      prev: formatPercentageNumber(row.prev),
+      real: formatPercentageNumber(row.real),
+      physical_deviation: formatPercentageNumber(row.physical_deviation),
+    }));
+  }, [selectedBuildWithMonth]);
+
+  const formattedLateActivities = useMemo(() => {
+    return selectedBuildWithMonth.lateActivities.map(row => ({
+      item: row.item,
+      activity: row.activity,
+      prev: formatPercentageNumber(row.prev),
+      real: formatPercentageNumber(row.real),
+      physical_deviation: formatPercentageNumber(row.physical_deviation),
+    }));
+  }, [selectedBuildWithMonth]);
 
   return (
     <>
@@ -137,7 +174,7 @@ const Dashboad: React.FC = () => {
           >
             <Select
               height={8}
-              value={selectedBuild.build}
+              value={selectedBuildWithMonth.build}
               backgroundColor="white"
               name="construction"
               placeholder="Selecione a obra"
@@ -147,10 +184,19 @@ const Dashboad: React.FC = () => {
                 borderColor: 'gray.400',
                 bg: 'white',
               }}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                const { value } = event.currentTarget;
+
+                if (!value) {
+                  return;
+                }
+
+                setSelectedBuildId(value);
+              }}
             >
-              <option value="build33">Obra33</option>
-              <option value="build34">Obra34</option>
-              <option value="build35">Obra35</option>
+              {builds.map(build => (
+                <option value={build.id}>{build.build}</option>
+              ))}
             </Select>
 
             <Select
@@ -166,23 +212,30 @@ const Dashboad: React.FC = () => {
                 borderColor: 'gray.400',
                 bg: 'white',
               }}
-            >
-              <option value="september">Setembro</option>
-              <option value="october">Outubro</option>
-              <option value="november">Novembro</option>
-            </Select>
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                const { value } = event.currentTarget;
 
-            <Tooltip label="Filtrar resultados" aria-label="Filtrar resultados">
-              <Button marginLeft={4} height={10} type="submit">
-                <FiSearch color="Black" size={40} />
-              </Button>
-            </Tooltip>
+                if (!value) {
+                  return;
+                }
+
+                setSelectedMonth(value);
+              }}
+            >
+              {selectedBuild.months.map(month => {
+                return (
+                  <option value={month.month_index}>
+                    {getMonthNameByIndex(Number(month.month_index))}
+                  </option>
+                );
+              })}
+            </Select>
           </Form>
         </Flex>
 
         <Flex marginTop={6} direction="column">
           <Box>
-            <Table data={selectedBuild.general} columns={GENERAL} />
+            <Table data={selectedBuildWithMonth.general} columns={GENERAL} />
           </Box>
 
           <Flex
@@ -203,35 +256,35 @@ const Dashboad: React.FC = () => {
             </Text>
             <Table
               title="Resumo das Principais Atividades"
-              data={selectedBuild.lateActivities}
+              data={formattedLateActivities}
               columns={SUMMARY_OF_LATE_ACTIVITIES}
             />
 
             <Table
               title="Principais Atividades Resumo"
-              data={selectedBuild.aheadActivities}
+              data={formattedAheadActivities}
               columns={SUMMARY_OF_AHEAD_ACTIVITIES}
             />
           </Flex>
         </Flex>
-        <Flex marginTop={6} direction="column">
+        <Flex marginY={6} direction="column">
           <BarChart
             sideText="% (porcentagem)"
             title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuild.directExpenses}
+            data={selectedBuildWithMonth.directExpenses}
           />
           <DashedChart
             title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuild.directExpenses}
+            data={selectedBuildWithMonth.directExpenses}
           />
           <BarChart
             sideText="% (porcentagem)"
             title="Despesas Totais (DD+DI) - Previstas x Realizadas"
-            data={selectedBuild.totalExpenses}
+            data={selectedBuildWithMonth.totalExpenses}
           />
           <DashedChart
             title="Despesas Totais (DD+DI) - Previstas x Realizadas"
-            data={selectedBuild.totalExpenses}
+            data={selectedBuildWithMonth.totalExpenses}
           />
         </Flex>
       </Box>
@@ -239,4 +292,4 @@ const Dashboad: React.FC = () => {
   );
 };
 
-export default Dashboad;
+export default Dashboard;

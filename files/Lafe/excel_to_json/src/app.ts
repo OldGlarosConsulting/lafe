@@ -42,7 +42,7 @@ async function getRowsInWorksheet({
 }
 
 
-async function direct_expenses_report() {
+async function management_direct_expenses_report() {
   /*  {
     id: '01',
     description: 'PROJETOS',
@@ -96,7 +96,7 @@ async function direct_expenses_report() {
   writeOutput(data);
 }
 
-async function indirect_expenses_report() {
+async function management_indirect_expenses_report() {
   /*  {
     id: '01',
     description: 'PROJETOS',
@@ -150,9 +150,10 @@ async function indirect_expenses_report() {
   writeOutput(data);
 }
 
-async function summary_of_projections_budget() {
+
+async function management_summary_of_projections_budget() {
   /*  {
-     month: 'set-20',
+    month: 'set-20',
     estimated_cumultative_financial: 0.5365,
     estimated_executed_financial: 0.6053,
     expected_cost_to_date: 21,
@@ -183,8 +184,93 @@ async function summary_of_projections_budget() {
 
 
     const rowData = {
-    month,
+      month,
     estimated_cumultative_financial
+  };
+
+    data.push(rowData);
+  }
+
+  writeOutput(data);
+}
+
+async function macro_late_activities() {
+  /*    {
+    item: '08',
+    activity: 'IPERMEABILIZAÇÃO / ISOLAMENTO',
+    prev: '54,02%',
+    real: '31,48%',
+    physical_deviation: '-22,54%',
+  },, */
+
+  const START_ROW = 8;
+  const END_ROW = 11;
+
+  const rows = await getRowsInWorksheet({
+    fileName: 'ControleBESet20.xlsx',
+    worksheetName: 'Análise Física Macro',
+    startRow: START_ROW,
+    endRow: END_ROW,
+  });
+
+  const data = [];
+
+  for (const row of rows) {
+    const item = getCellValue(row.getCell('F'));
+    const activity = getCellValue(row.getCell('G'));
+    const prev = getCellValue(row.getCell('M'));
+    const real = getCellValue(row.getCell('N'));
+    const physical_deviation = getCellValue(row.getCell('O'));
+
+
+    const rowData = {
+      item,
+      activity,
+      prev,
+      real,
+      physical_deviation,
+    };
+
+    data.push(rowData);
+  }
+
+  writeOutput(data);
+}
+async function macro_ahead_activities() {
+  /*    {
+    item: '08',
+    activity: 'IPERMEABILIZAÇÃO / ISOLAMENTO',
+    prev: '54,02%',
+    real: '31,48%',
+    physical_deviation: '-22,54%',
+  },, */
+
+  const START_ROW = 19;
+  const END_ROW = 25;
+
+  const rows = await getRowsInWorksheet({
+    fileName: 'ControleBESet20.xlsx',
+    worksheetName: 'Análise Física Macro',
+    startRow: START_ROW,
+    endRow: END_ROW,
+  });
+
+  const data = [];
+
+  for (const row of rows) {
+    const item = getCellValue(row.getCell('F'));
+    const activity = getCellValue(row.getCell('G'));
+    const prev = getCellValue(row.getCell('M'));
+    const real = getCellValue(row.getCell('N'));
+    const physical_deviation = getCellValue(row.getCell('O'));
+
+
+    const rowData = {
+      item,
+      activity,
+      prev,
+      real,
+      physical_deviation,
     };
 
     data.push(rowData);
@@ -193,4 +279,4 @@ async function summary_of_projections_budget() {
   writeOutput(data);
 }
 
-summary_of_projections_budget();
+macro_ahead_activities();

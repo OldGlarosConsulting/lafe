@@ -1,5 +1,4 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
 import { Column } from 'react-table';
 
 import BarChart from '@/components/BarChart';
@@ -12,55 +11,11 @@ import Title from '@/components/Title';
 import formatPercentageNumber from '@/utils/formatPercentageNumber';
 import formatRealValue from '@/utils/formatRealValue';
 import getMonthNameByIndex from '@/utils/getMonthNameByIndex';
-import { Box, Button, Flex, Text, Tooltip } from '@chakra-ui/core';
+import { Box, Flex, Text } from '@chakra-ui/core';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
 import builds from '../mocks/management-dashboard/data';
-
-interface IDirectFinacialsAnalysis {
-  id: string;
-  description: string;
-  percent_measured: number;
-  budget: number;
-  weight: number;
-  measured: number;
-  payments: number;
-  money_available: number;
-  projection: number;
-}
-
-interface ISummaryOfProjectionsBudget {
-  month: string;
-  estimated_cumultative_financial: number;
-  estimated_executed_financial: number;
-  expected_cost_to_date: number;
-  cost_measured_to_date: number;
-  real_cost_to_date: number;
-  budget: number;
-  projected_cost: number;
-  financial_trend: number;
-  projected_cost_per_meter: number;
-  equivalent_area: number;
-}
-
-interface IChartData {
-  bars: Array<{
-    color: string;
-    name: string;
-    data: number[];
-  }>;
-  categories: Array<string>;
-}
-
-interface IBuild {
-  build: string;
-  month: string;
-  directExpenses: IDirectFinacialsAnalysis[];
-  indirectExpenses: IDirectFinacialsAnalysis[];
-  summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
-  summaryOfProjectionsBudgetChart: IChartData;
-}
 
 const FINANCIAL_ANALYSIS = [
   {
@@ -226,14 +181,6 @@ const Dashboard: React.FC = () => {
     return selectedBuild.months[findMonthIndex];
   }, [selectedBuild, selectedMonth]);
 
-  /* {
-    month: firstMonth.month,
-    build: firstMonth.month,
-    indirectExpenses: firstMonth.indirectExpenses,
-    summaryOfProjectionsBudget: firstMonth.summaryOfProjectionsBudget,
-    summaryOfProjectionsBudgetChart: firstMonth.summaryOfProjectionsBudgetChart,
-  } */
-
   const formattedDirectExpenses = useMemo(() => {
     return selectedBuildWithMonth.directExpenses.map(expense => ({
       id: expense.id,
@@ -245,6 +192,40 @@ const Dashboard: React.FC = () => {
       payments: formatRealValue(expense.payments),
       money_available: formatRealValue(expense.money_available),
       projection: formatRealValue(expense.projection),
+    }));
+  }, [selectedBuildWithMonth]);
+
+  const formattedIndirectExpenses = useMemo(() => {
+    return selectedBuildWithMonth.indirectExpenses.map(expense => ({
+      id: expense.id,
+      description: expense.description,
+      percent_measured: formatPercentageNumber(expense.percent_measured),
+      budget: formatRealValue(expense.budget),
+      weight: formatRealValue(expense.weight),
+      measured: formatRealValue(expense.measured),
+      payments: formatRealValue(expense.payments),
+      money_available: formatRealValue(expense.money_available),
+      projection: formatRealValue(expense.projection),
+    }));
+  }, [selectedBuildWithMonth]);
+
+  const formattedSummaryProjectionsBudget = useMemo(() => {
+    return selectedBuildWithMonth.summaryOfProjectionsBudget.map(row => ({
+      month: row.month,
+      estimated_cumultative_financial: formatPercentageNumber(
+        row.estimated_cumultative_financial,
+      ),
+      estimated_executed_financial: formatPercentageNumber(
+        row.estimated_executed_financial,
+      ),
+      expected_cost_to_date: formatRealValue(row.expected_cost_to_date),
+      cost_measured_to_date: formatRealValue(row.cost_measured_to_date),
+      real_cost_to_date: formatRealValue(row.real_cost_to_date),
+      budget: formatRealValue(row.budget),
+      projected_cost: formatRealValue(row.projected_cost),
+      financial_trend: formatPercentageNumber(row.financial_trend),
+      projected_cost_per_meter: formatRealValue(row.projected_cost_per_meter),
+      equivalent_area: formatRealValue(row.equivalent_area),
     }));
   }, [selectedBuildWithMonth]);
 
@@ -365,7 +346,7 @@ const Dashboard: React.FC = () => {
             />
             <Table
               heading="Despesas Indiretas"
-              data={selectedBuildWithMonth.indirectExpenses}
+              data={formattedIndirectExpenses}
               columns={DIRECT_EXPENSES}
             />
           </Flex>
@@ -387,7 +368,7 @@ const Dashboard: React.FC = () => {
               SÍNTESE DAS PROJEÇÕES x ORÇAMENTO
             </Text>
             <Table
-              data={selectedBuildWithMonth.summaryOfProjectionsBudget}
+              data={formattedSummaryProjectionsBudget}
               columns={SUMMARY_OF_PROJECTIONS_BUDGET}
             />
             <BarChart
@@ -397,23 +378,16 @@ const Dashboard: React.FC = () => {
             />
           </Flex>
         </Flex>
-        <Flex marginTop={6} direction="column">
-          {/* <BarChart
-            title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuild.directExpenses}
-          />
-          <DashedChart
-            title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuild.directExpenses}
-          />
+        <Flex marginY={6} direction="column">
           <BarChart
-            title="Despesas Totais (DD+DI) - Previstas x Realizadas"
-            data={selectedBuild.totalExpenses}
+            sideText="% percent"
+            title="Dispesas Diretas - Previstas X Realizadas"
+            data={selectedBuildWithMonth.monthlyEvolutionChart}
           />
           <DashedChart
-            title="Despesas Totais (DD+DI) - Previstas x Realizadas"
-            data={selectedBuild.totalExpenses}
-          /> */}
+            title="Dispesas Diretas - Previstas X Realizadas"
+            data={selectedBuildWithMonth.monthlyEvolutionChart}
+          />
         </Flex>
       </Box>
     </>

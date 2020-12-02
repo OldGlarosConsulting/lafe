@@ -45,6 +45,7 @@ interface IMonthBuild {
     indirectExpenses: IDirectFinacialsAnalysis[];
     summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
     summaryOfProjectionsBudgetChart: IChartData;
+    monthlyEvolutionChart: IChartData;
   }>;
 }
 

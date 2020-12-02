@@ -3,9 +3,9 @@ import septemberBuild from './september/september-build';
 interface IMainActivities {
   item: string;
   activity: string;
-  prev: string;
-  real: string;
-  physical_deviation: string;
+  prev: number;
+  real: number;
+  physical_deviation: number;
 }
 
 interface IChartData {
@@ -18,10 +18,11 @@ interface IChartData {
 }
 
 interface IMonthBuild {
+  id: string;
   build: string;
   months: Array<{
     build: string;
-    month: string;
+    month_index: string;
     directExpenses: IChartData;
     totalExpenses: IChartData;
     general: Array<object>;
@@ -30,4 +31,8 @@ interface IMonthBuild {
   }>;
 }
 
-export default { build: 'build33', months: [septemberBuild] } as IMonthBuild;
+export default {
+  id: 'build33',
+  build: 'Obra 33',
+  months: [septemberBuild],
+} as IMonthBuild;

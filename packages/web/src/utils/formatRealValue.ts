@@ -4,7 +4,6 @@ export default function formatRealValue(value?: number): string | undefined {
   }
 
   return Intl.NumberFormat('pt-BR', {
-    style: 'currency',
     currency: 'BRL',
   }).format(value);
 }

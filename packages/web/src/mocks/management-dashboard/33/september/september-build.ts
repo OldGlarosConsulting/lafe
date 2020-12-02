@@ -1,14 +1,10 @@
-// eslint-disable-next-line
-import { format } from 'date-fns';
-// eslint-disable-next-line
-import { ptBR } from 'date-fns/locale'
-
+import monthlyEvolutionChart from './charts/monthly-evolution-of-total-expenses';
 import summaryOfProjectionsBudgetChart from './charts/summary-of-projections-budget';
 import directExpenses from './tables/financial-analysis/direct-expenses';
 import indirectExpenses from './tables/financial-analysis/indirect-expenses';
 import summaryOfProjectionsBudget from './tables/summary-of-projections-budget';
 
-interface IFinacialsAnalysis {
+interface IDirectFinacialsAnalysis {
   id: string;
   description: string;
   percent_measured: number;
@@ -46,10 +42,11 @@ interface IChartData {
 interface IBuild {
   build: string;
   month_index: string;
-  directExpenses: IFinacialsAnalysis[];
-  indirectExpenses: IFinacialsAnalysis[];
+  directExpenses: IDirectFinacialsAnalysis[];
+  indirectExpenses: IDirectFinacialsAnalysis[];
   summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
   summaryOfProjectionsBudgetChart: IChartData;
+  monthlyEvolutionChart: IChartData;
 }
 
 export default {
@@ -59,4 +56,5 @@ export default {
   indirectExpenses,
   summaryOfProjectionsBudget,
   summaryOfProjectionsBudgetChart,
+  monthlyEvolutionChart,
 } as IBuild;

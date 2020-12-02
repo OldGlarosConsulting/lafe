@@ -3,9 +3,9 @@ import build33 from './33/build';
 interface IMainActivities {
   item: string;
   activity: string;
-  prev: string;
-  real: string;
-  physical_deviation: string;
+  prev: number;
+  real: number;
+  physical_deviation: number;
 }
 
 interface IChartData {
@@ -18,8 +18,10 @@ interface IChartData {
 }
 
 interface IMonthBuild {
+  id: string;
   build: string;
   months: Array<{
+    month_index: string;
     build: string;
     month: string;
     directExpenses: IChartData;

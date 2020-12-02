@@ -1,43 +1,51 @@
 [
   {
-    "month": "SÍNTESE DAS PROJEÇÕES x ORÇAMENTO",
-    "estimated_cumultative_financial": "SÍNTESE DAS PROJEÇÕES x ORÇAMENTO"
-  },
-  {},
-  {
-    "month": 0.5365
-  },
-  {
-    "month": 0.6053360860640478
+    "item": "16 ",
+    "activity": "INSTALAÇÕES",
+    "prev": 0.29116779449317975,
+    "real": 0.6275331391297557,
+    "physical_deviation": 0.33636534463657597
   },
   {
-    "month": 5344100.044763984
+    "item": "12 ",
+    "activity": "REVESTIMENTO EXTERNO",
+    "prev": 0.489482617240399,
+    "real": 0.8522810953202222,
+    "physical_deviation": 0.36279847807982324
   },
   {
-    "month": 6072681.637378994
+    "item": "10 ",
+    "activity": "REVESTIMENTO DE PAREDE",
+    "prev": 0.36362173825650207,
+    "real": 0.4050037376791716,
+    "physical_deviation": 0.04138199942266951
   },
   {
-    "month": 5647485.024745222
+    "item": "20 ",
+    "activity": "DIVERSOS",
+    "prev": 0,
+    "real": 0.026212993540981482,
+    "physical_deviation": 0.026212993540981482
   },
   {
-    "month": 10031917.43757446
+    "item": "09 ",
+    "activity": "REVESTIMENTO DE PISO",
+    "prev": 0.1628506267849298,
+    "real": 0.17288905780647884,
+    "physical_deviation": 0.010038431021549055
   },
   {
-    "month": 9507678.137680415
+    "item": "07 ",
+    "activity": "ALVENARIA / FECHAMENTO",
+    "prev": 0.7766034354798593,
+    "real": 0.7943345886020291,
+    "physical_deviation": 0.017731153122169774
   },
   {
-    "month": -0.05225713859351658
-  },
-  {
-    "month": 2924.3956426876607
-  },
-  {},
-  {
-    "month": null,
-    "estimated_cumultative_financial": null
-  },
-  {
-    "month": "EVOLUÇÃO FINANCEIRA",
-    "estimated_cumultative_financial": "EVOLUÇÃO FINANCEIRA"
+    "item": "19 ",
+    "activity": "PINTURA",
+    "prev": 0,
+    "real": 0.007758912475318634,
+    "physical_deviation": 0.007758912475318634
   }
 ]
