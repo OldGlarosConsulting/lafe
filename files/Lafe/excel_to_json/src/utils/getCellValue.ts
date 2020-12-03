@@ -1,6 +1,6 @@
 import { Cell, CellValue } from 'exceljs';
 
-export default function getCellValue(cell: Cell): string | number | Date | null {
+export default function getCellValue(cell: Cell): CellValue {
   const { value, result } = cell;
 
   if (!value) {
@@ -13,5 +13,5 @@ export default function getCellValue(cell: Cell): string | number | Date | null 
 
   console.log(result)
 
-  return result;
+  return value;
 }

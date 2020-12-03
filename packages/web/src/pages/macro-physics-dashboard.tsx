@@ -12,7 +12,7 @@ import Title from '@/components/Title';
 import formatPercentageNumber from '@/utils/formatPercentageNumber';
 import formatRealValue from '@/utils/formatRealValue';
 import getMonthNameByIndex from '@/utils/getMonthNameByIndex';
-import { Box, Button, Flex, Text, Tooltip } from '@chakra-ui/core';
+import { Box, useToast, Flex, Text, Tooltip } from '@chakra-ui/core';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
@@ -98,6 +98,8 @@ const SUMMARY_OF_LATE_ACTIVITIES = [
 const Dashboard: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
+  const toast = useToast();
+
   const firstBuild = useMemo(() => builds[0], []);
   const firstMonth = useMemo(() => {
     return firstBuild.months[0];
@@ -117,8 +119,40 @@ const Dashboard: React.FC = () => {
       month => month.month_index === selectedMonth,
     );
 
+    console.log(selectedBuild.months[findMonthIndex].directExpenses);
+
     return selectedBuild.months[findMonthIndex];
   }, [selectedBuild, selectedMonth]);
+
+  const formattedGeneralTableData = useMemo(() => {
+    return selectedBuildWithMonth.general.map(row => ({
+      month: <Text color="red.500">{row.month}</Text>,
+      estimated_cumultative_physics: (
+        <Text color="blue.500">
+          {formatPercentageNumber(row.estimated_cumultative_physics)}
+        </Text>
+      ),
+      cumulative_physics_executed: (
+        <Text color="red.500">
+          {formatPercentageNumber(row.cumulative_physics_executed)}
+        </Text>
+      ),
+      expected_monthly_physical: (
+        <Text color="blue.500">
+          {formatPercentageNumber(row.expected_monthly_physical)}
+        </Text>
+      ),
+      physical_monthly_executed: (
+        <Text color="red.500">
+          {formatPercentageNumber(row.physical_monthly_executed)}
+        </Text>
+      ),
+      physical_deviation: formatPercentageNumber(row.physical_deviation),
+      performed_monthly_physicist: (
+        <Text color="green.400">{row.performed_monthly_physicist}</Text>
+      ),
+    }));
+  }, [selectedBuildWithMonth]);
 
   const formattedAheadActivities = useMemo(() => {
     return selectedBuildWithMonth.aheadActivities.map(row => ({
@@ -191,6 +225,27 @@ const Dashboard: React.FC = () => {
                   return;
                 }
 
+                const findBuild = builds.find(build => build.id === value);
+
+                const findMonthIndex = findBuild.months.findIndex(
+                  month => month.month_index === selectedMonth,
+                );
+
+                if (findMonthIndex < 0) {
+                  toast({
+                    isClosable: true,
+                    status: 'error',
+                    title:
+                      'O registro dessa obra ainda não tem dados desse mês',
+                    description:
+                      'Mês indisponível, por favor selecione outro mês .',
+                    position: 'top',
+                    duration: 6000,
+                  });
+
+                  return;
+                }
+
                 setSelectedBuildId(value);
               }}
             >
@@ -235,7 +290,7 @@ const Dashboard: React.FC = () => {
 
         <Flex marginTop={6} direction="column">
           <Box>
-            <Table data={selectedBuildWithMonth.general} columns={GENERAL} />
+            <Table data={formattedGeneralTableData} columns={GENERAL} />
           </Box>
 
           <Flex

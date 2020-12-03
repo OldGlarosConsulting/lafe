@@ -1,10 +1,4 @@
-interface IMainActivities {
-  item: string;
-  activity: string;
-  prev: number;
-  real: number;
-  physical_deviation: number;
-}
+import IMainActivities from '@/interfaces/builds/IMainActivities';
 
 export default [
   {

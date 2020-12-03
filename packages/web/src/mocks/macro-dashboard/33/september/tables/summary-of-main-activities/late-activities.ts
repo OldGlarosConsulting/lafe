@@ -1,15 +1,9 @@
-interface IMainActivities {
-  item: string;
-  activity: string;
-  prev: number;
-  real: number;
-  physical_deviation: number;
-}
+import IMainActivities from '@/interfaces/builds/IMainActivities';
 
 export default [
   {
     item: '08',
-    activity: 'IPERMEABILIZAÇÃO / ISOLAMENTO',
+    activity: 'IMPERMEABILIZAÇÃO / ISOLAMENTO',
     prev: 0.5401541989167025,
     real: 0.3147717407958634,
     physical_deviation: -0.22538245812083907,

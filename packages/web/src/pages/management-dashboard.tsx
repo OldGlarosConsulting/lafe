@@ -11,7 +11,7 @@ import Title from '@/components/Title';
 import formatPercentageNumber from '@/utils/formatPercentageNumber';
 import formatRealValue from '@/utils/formatRealValue';
 import getMonthNameByIndex from '@/utils/getMonthNameByIndex';
-import { Box, Flex, Text } from '@chakra-ui/core';
+import { Box, Flex, useToast, Text } from '@chakra-ui/core';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
@@ -159,6 +159,8 @@ const SUMMARY_OF_PROJECTIONS_BUDGET = [
 const Dashboard: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
+  const toast = useToast();
+
   const firstBuild = useMemo(() => builds[0], []);
   const firstMonth = useMemo(() => {
     return firstBuild.months[0];
@@ -277,6 +279,27 @@ const Dashboard: React.FC = () => {
                 const { value } = event.currentTarget;
 
                 if (!value) {
+                  return;
+                }
+
+                const findBuild = builds.find(build => build.id === value);
+
+                const findMonthIndex = findBuild.months.findIndex(
+                  month => month.month_index === selectedMonth,
+                );
+
+                if (findMonthIndex < 0) {
+                  toast({
+                    isClosable: true,
+                    status: 'error',
+                    title:
+                      'O registro dessa obra ainda não tem dados desse mês',
+                    description:
+                      'Mês indisponível, por favor selecione outro mês .',
+                    position: 'top',
+                    duration: 6000,
+                  });
+
                   return;
                 }
 

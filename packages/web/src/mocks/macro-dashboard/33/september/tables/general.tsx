@@ -1,24 +1,22 @@
-import React from 'react';
-
-import { Text } from '@chakra-ui/core';
+import IGeneralTable from '@/interfaces/builds/IGeneralTable';
 
 export default [
   {
-    month: <Text color="red.500">set-20</Text>,
-    estimated_cumultative_physics: <Text color="blue.500">48,42%</Text>,
-    cumulative_physics_executed: <Text color="red.500">56,85%</Text>,
-    expected_monthly_physical: <Text color="blue.500">3,94%</Text>,
-    physical_monthly_executed: <Text color="red.500">8,27%</Text>,
-    physical_deviation: '8,43%',
-    performed_monthly_physicist: <Text color="green.400">34</Text>,
+    month: 'set-20',
+    estimated_cumultative_physics: 0.4842,
+    cumulative_physics_executed: 0.5685,
+    expected_monthly_physical: 0.0394,
+    physical_monthly_executed: 0.0827,
+    physical_deviation: 0.0843,
+    performed_monthly_physicist: 34,
   },
   {
-    month: <Text color="red.500">ago-20</Text>,
-    estimated_cumultative_physics: <Text color="blue.500">44,49%</Text>,
-    cumulative_physics_executed: <Text color="red.500">48,59%</Text>,
-    expected_monthly_physical: <Text color="blue.500">4,11%</Text>,
-    physical_monthly_executed: <Text color="red.500">5,81%</Text>,
-    physical_deviation: '4,10%',
-    performed_monthly_physicist: <Text color="green.400">22</Text>,
+    month: 'ago-20',
+    estimated_cumultative_physics: 0.4449,
+    cumulative_physics_executed: 0.4859,
+    expected_monthly_physical: 0.0411,
+    physical_monthly_executed: 0.0581,
+    physical_deviation: 0.041,
+    performed_monthly_physicist: 22,
   },
-];
+] as IGeneralTable[];

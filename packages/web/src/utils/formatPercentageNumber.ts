@@ -5,6 +5,10 @@ export default function formatPercentageNumber(
     return undefined;
   }
 
+  if (!value) {
+    return undefined;
+  }
+
   return value.toLocaleString('pt-br', {
     style: 'percent',
     minimumFractionDigits: 2,

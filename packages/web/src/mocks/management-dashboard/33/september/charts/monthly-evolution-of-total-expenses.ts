@@ -1,11 +1,4 @@
-interface IChartData {
-  bars: Array<{
-    color: string;
-    name: string;
-    data: number[];
-  }>;
-  categories: Array<string>;
-}
+import IChartData from '@/interfaces/builds/IChartData';
 
 export default {
   categories: [

@@ -1,14 +1,4 @@
-interface IFinacialsAnalysis {
-  id: string;
-  description: string;
-  percent_measured: number;
-  budget: number;
-  weight: number;
-  measured: number;
-  payments: number;
-  money_available: number;
-  projection: number;
-}
+import IFinacialsAnalysis from '@/interfaces/builds/IFinacialsAnalysis';
 
 export default [
   {

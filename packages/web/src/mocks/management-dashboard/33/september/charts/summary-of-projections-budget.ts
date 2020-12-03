@@ -1,38 +1,33 @@
-interface IChartData {
-  bars: Array<{
-    color: string;
-    name: string;
-    data: number[];
-  }>;
-  categories: Array<string>;
-}
+import IChartData from '@/interfaces/builds/IChartData';
 
 export default {
   categories: [
-    'PROJETOS',
-    'LAUDOS E ESTUDOS',
-    'SERVIÇOS PRELIMINARES',
-    'TERRAPLANAGEM',
-    'SUPER ESTRUTURA',
-    'ALVENARIA/FECHAMENTO',
-    'IMPERMEABILIZAÇÃO/ISOLAMENTO',
-    'REVESTIMENTO DE PISO',
-    'REVESTIMENTO DE TETO',
-    'REVESTIMENTO EXTERNO',
-    'ESQUADRIAS DE ALUMINÍO',
-    'ESQUADRIAS EM METALON',
-    'ESQUADRIAS EM MADEIRA',
-    'INSTALAÇÕES',
-    'BACADAS',
-    'LOUÇAS E METAIS',
-    'PINTURA',
-    'DIVERSOS',
-    'LICENÇAS TAXAS E EMOLUMENTOS',
-    'SEGURANÇA DO TRABALHO',
-    'CUSTOS INDIRETOS - PESSOAL',
-    'CUSTOS INDIRETOS - EQUIPAMENTOS',
-    'CUSTOS INDIRETOS - OUTROS',
-    'ADMINISTRAÇÃO',
+    'Projetos',
+    'Laudos e estudos',
+    'Serviços preliminares',
+    'Terraplanagem',
+    'Fundação',
+    'Super estrutura',
+    'Alvenaria/Fechamento',
+    'Impermeabilização/Isolamento',
+    'Revestimento de piso',
+    'Revestimento de parede',
+    'Revestimento de teto',
+    'Revestimento externo',
+    'Esquadrias de alumínio',
+    'Esquadrias em metalon',
+    'Esquadrias em madeira',
+    'Instalações',
+    'Bancadas',
+    'Louças e metais',
+    'Pintura',
+    'Diversos',
+    'Licenças, taxas e emolumentos',
+    'Segurança do trabalho',
+    'Custos indiretos - pessoal',
+    'Custos indiretos - equipamentos',
+    'Custos indiretos - outros',
+    'Administração',
   ],
   bars: [
     {
