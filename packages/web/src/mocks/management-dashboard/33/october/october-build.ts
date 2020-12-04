@@ -1,5 +1,6 @@
 import IBuild from '@/interfaces/builds/IManagementBuild';
 
+import acumulatedEvolution from './charts/acumulated-evolution-of-total-expenses';
 import monthlyEvolutionChart from './charts/monthly-evolution-of-total-expenses';
 import summaryOfProjectionsBudgetChart from './charts/summary-of-projections-budget';
 import directExpenses from './tables/financial-analysis/direct-expenses';
@@ -14,4 +15,5 @@ export default {
   summaryOfProjectionsBudget,
   summaryOfProjectionsBudgetChart,
   monthlyEvolutionChart,
+  acumulatedEvolution,
 } as IBuild;

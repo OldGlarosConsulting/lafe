@@ -409,7 +409,7 @@ const Dashboard: React.FC = () => {
           />
           <DashedChart
             title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuildWithMonth.monthlyEvolutionChart}
+            data={selectedBuildWithMonth.acumulatedEvolution}
           />
         </Flex>
       </Box>

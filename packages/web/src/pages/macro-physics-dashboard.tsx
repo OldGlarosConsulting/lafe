@@ -44,7 +44,7 @@ const GENERAL = [
     accessor: 'physical_deviation',
   },
   {
-    Header: <Text color="green.500">Obra adiantada (em dias)</Text>,
+    Header: <Text color="green.500">Status (em dias)</Text>,
     accessor: 'performed_monthly_physicist',
   },
 ] as Column[];
@@ -118,8 +118,6 @@ const Dashboard: React.FC = () => {
     const findMonthIndex = selectedBuild.months.findIndex(
       month => month.month_index === selectedMonth,
     );
-
-    console.log(selectedBuild.months[findMonthIndex].directExpenses);
 
     return selectedBuild.months[findMonthIndex];
   }, [selectedBuild, selectedMonth]);
@@ -330,7 +328,7 @@ const Dashboard: React.FC = () => {
           />
           <DashedChart
             title="Dispesas Diretas - Previstas X Realizadas"
-            data={selectedBuildWithMonth.directExpenses}
+            data={selectedBuildWithMonth.dashedDirectExpenses}
           />
           <BarChart
             sideText="% (porcentagem)"
@@ -339,7 +337,7 @@ const Dashboard: React.FC = () => {
           />
           <DashedChart
             title="Despesas Totais (DD+DI) - Previstas x Realizadas"
-            data={selectedBuildWithMonth.totalExpenses}
+            data={selectedBuildWithMonth.dashedTotalExpenses}
           />
         </Flex>
       </Box>

@@ -24,15 +24,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/login": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/login.js"
+    ],
     "/macro-physics-dashboard": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/macro-physics-dashboard.js"
-    ],
-    "/management-dashboard": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/management-dashboard.js"
     ]
   },
   "ampFirstPages": []

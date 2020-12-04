@@ -1,65 +1,68 @@
 [
   {
-    "item": "06",
-    "activity": "SUPER-ESTRUTURA",
-    "prev": 0.44808126189156106,
-    "real": 0.5195364026063629,
-    "physical_deviation": 0.07145514071480186
+    "id": "01",
+    "description": "LICENÇAS, TAXAS E EMOLUMENTOS",
+    "percent_measured": 0.11188099830755222,
+    "budget": 176266.98882533333,
+    "weight": 1.9817611939784323,
+    "measured": 19720.926678444444,
+    "payments": 10849.73,
+    "money_available": 165417.25882533332,
+    "projection": 176266.98882533333
   },
   {
-    "item": "05",
-    "activity": "FUNDAÇÃO",
-    "prev": 0.7664595002337945,
-    "real": 0.8541584081465083,
-    "physical_deviation": 0.08769890791271384
+    "id": "02",
+    "description": "SEGURANÇA DO TRABALHO",
+    "percent_measured": 0.031015375688258885,
+    "budget": 66453.88978266667,
+    "weight": 0.7471378551244708,
+    "measured": 2061.0923575555553,
+    "payments": 917.55,
+    "money_available": 65536.33978266666,
+    "projection": 66453.88978266667
   },
   {
-    "item": "01",
-    "activity": "PROJETOS",
-    "prev": 0.94902467638953,
-    "real": 1,
-    "physical_deviation": 0.05097532361046997
+    "id": "03",
+    "description": "CUSTOS INDIRETOS - PESSOAL",
+    "percent_measured": 0.08498438085758508,
+    "budget": 1491465.8194243333,
+    "weight": 16.76847776647096,
+    "measured": 126751.29923402777,
+    "payments": 66153.58,
+    "money_available": 1425312.2394243332,
+    "projection": 1491465.8194243333
   },
   {
-    "item": "07",
-    "activity": "ALVENARIA / FECHAMENTO",
-    "prev": null,
-    "real": 0.05333602805480429,
-    "physical_deviation": 0.05333602805480429
+    "id": "04",
+    "description": "CUSTOS INDIRETOS - EQUIPAMENTOS",
+    "percent_measured": 0.019164437908199394,
+    "budget": 166304.37722666666,
+    "weight": 1.8697520356641586,
+    "measured": 3187.1299112222223,
+    "payments": 4118.43,
+    "money_available": 162185.94722666667,
+    "projection": 166304.37722666666
   },
   {
-    "item": "16",
-    "activity": "INSTALAÇÕES",
-    "prev": 0.01519838294436581,
-    "real": 0.021642044946072074,
-    "physical_deviation": 0.006443662001706265
+    "id": "05",
+    "description": "CUSTOS INDIRETOS - OUTROS",
+    "percent_measured": 0.11579054589164747,
+    "budget": 314812.9527443334,
+    "weight": 3.539426737065928,
+    "measured": 36452.36365202779,
+    "payments": 33960.21,
+    "money_available": 280852.7427443334,
+    "projection": 314812.9527443334
   },
   {
-    "item": "08",
-    "activity": "IMPERMEABILIZAÇÃO / ISOLAMENTO",
-    "prev": null,
-    "real": 0.0938998730744653,
-    "physical_deviation": 0.0938998730744653
-  },
-  {
-    "item": "03",
-    "activity": "SERVIÇOS PRELIMINARES",
-    "prev": 0.2187777795014748,
-    "real": 0.33538402438641934,
-    "physical_deviation": 0.11660624488494453
-  },
-  {
-    "item": "09",
-    "activity": "REVESTIMENTO DE PISO",
-    "prev": null,
-    "real": 0.004521309079394312,
-    "physical_deviation": 0.004521309079394312
-  },
-  {
-    "item": "02",
-    "activity": "LAUDOS E ESTUDOS",
-    "prev": 0.8835815939014003,
-    "real": 0.8954646063415383,
-    "physical_deviation": 0.011883012440138008
+    "id": "06",
+    "description": "ADMINISTRAÇÃO",
+    "percent_measured": 0.0445,
+    "budget": 1160259.0634086481,
+    "weight": 13.044736295481286,
+    "measured": 51631.52832168484,
+    "payments": 51571.755,
+    "money_available": 1108687.3084086482,
+    "projection": 1160259.0634086481
   }
 ]

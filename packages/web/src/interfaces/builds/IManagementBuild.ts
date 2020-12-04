@@ -10,4 +10,5 @@ export default interface IBuild {
   summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
   summaryOfProjectionsBudgetChart: IChartData;
   monthlyEvolutionChart: IChartData;
+  acumulatedEvolution: IChartData;
 }

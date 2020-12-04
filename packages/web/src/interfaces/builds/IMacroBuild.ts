@@ -6,7 +6,8 @@ export default interface IBuild {
   build: string;
   month_index: string;
   directExpenses: IChartData;
-  totalExpenses: IChartData;
+  dashedDirectExpenses: IChartData;
+  dashedTotalExpenses: IChartData;
   general: Array<IGeneralTable>;
   aheadActivities: IMainActivities[];
   lateActivities: IMainActivities[];

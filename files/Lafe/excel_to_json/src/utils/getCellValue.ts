@@ -13,5 +13,5 @@ export default function getCellValue(cell: Cell): CellValue {
 
   console.log(result)
 
-  return value;
+  return result;
 }

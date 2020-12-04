@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Props as ApexChartProps } from 'react-apexcharts';
 
 import dynamic from 'next/dynamic';
@@ -30,52 +30,54 @@ interface IConfigs {
 }
 
 const ApexBarChart: React.FC<IBarChartProps> = ({ sideText, data, title }) => {
-  const [chartConfigs, setChartConfigs] = useState<IConfigs>({
-    series: data.bars,
-    options: {
-      chart: {
-        type: 'bar',
-        height: 350,
-      },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '55%',
-          endingShape: 'rounded',
+  const chartConfigs = useMemo(() => {
+    return {
+      series: data.bars,
+      options: {
+        chart: {
+          type: 'bar',
+          height: 350,
         },
-      },
-      title: {
-        text: title,
-        align: 'center',
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent'],
-      },
-      xaxis: {
-        categories: data.categories,
-      },
-      yaxis: {
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded',
+          },
+        },
         title: {
-          text: sideText,
+          text: title,
+          align: 'center',
         },
-      },
-      fill: {
-        opacity: 1,
-      },
-      tooltip: {
-        y: {
-          formatter(val) {
-            return `${val}`;
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent'],
+        },
+        xaxis: {
+          categories: data.categories,
+        },
+        yaxis: {
+          title: {
+            text: sideText,
+          },
+        },
+        fill: {
+          opacity: 1,
+        },
+        tooltip: {
+          y: {
+            formatter(val) {
+              return `${val}`;
+            },
           },
         },
       },
-    },
-  });
+    };
+  }, [sideText, data, title]);
 
   return (
     <Box

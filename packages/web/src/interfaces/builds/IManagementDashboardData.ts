@@ -13,5 +13,6 @@ export default interface IMonthBuild {
     summaryOfProjectionsBudget: ISummaryOfProjectionsBudget[];
     summaryOfProjectionsBudgetChart: IChartData;
     monthlyEvolutionChart: IChartData;
+    acumulatedEvolution: IChartData;
   }>;
 }

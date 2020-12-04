@@ -1,5 +1,7 @@
 import IBuild from '@/interfaces/builds/IMacroBuild';
 
+import dashedDirectExpenses from './charts/dashed-direct-expenses';
+import dashedTotalExpenses from './charts/dashed-total-expenses';
 import directExpenses from './charts/direct-expenses';
 import totalExpenses from './charts/total-expenses';
 import general from './tables/general';
@@ -10,6 +12,8 @@ export default {
   build: 'build34',
   month_index: '11',
   directExpenses,
+  dashedDirectExpenses,
+  dashedTotalExpenses,
   totalExpenses,
   general,
   aheadActivities,

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 import { useRouter } from 'next/router';
 
+import { useAuthentication } from '@/hooks/authentication';
 import {
   Flex,
   Image,
@@ -16,6 +17,8 @@ import {
 
 const Header: React.FC = () => {
   const router = useRouter();
+
+  const { logOut, user } = useAuthentication();
 
   return (
     <Flex
@@ -94,13 +97,13 @@ const Header: React.FC = () => {
         </Button>
       </Flex>
       <Flex alignItems="center">
-        <Text marginRight={2}>Olá Eduardo</Text>
+        {user && <Text marginRight={2}>{`Olá ${user.name}`}</Text>}
         <Menu>
           <MenuButton width={10} height={10} _focusWithin={{ outline: 0 }}>
             <Avatar size="sm" bg="blue.300" />
           </MenuButton>
           <MenuList>
-            <MenuItem>Sair</MenuItem>
+            <MenuItem onClick={logOut}>Sair</MenuItem>
             <MenuItem>Alterar avatar</MenuItem>
           </MenuList>
         </Menu>

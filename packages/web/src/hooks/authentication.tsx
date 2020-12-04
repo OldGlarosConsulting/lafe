@@ -90,7 +90,8 @@ const AuthenticationProvider: React.FC = ({ children }) => {
         user: response.data,
       });
     });
-  }, [isLoggedIn, data, setData, router]);
+    // eslint-disable-next-line
+  }, [router]);
 
   return (
     <AuthenticationContext.Provider
